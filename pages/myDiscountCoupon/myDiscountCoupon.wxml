@@ -1,0 +1,26 @@
+<!--pages/myDiscountCoupon/myDiscountCoupon.wxml-->
+<view class='myDiscountCoupon'>
+  <view class='title'>
+    <text>可用券</text>
+  </view>
+  <view class='discountsBack' wx:for="{{list}}" wx:key='{{item}}'>
+    <view class='discountsFrame'>
+      <view class='synopsis'>
+        <view class='img'>
+          <image src='{{item.ticketType == 1? "../../image/subtracts.png": item.ticketType == 3? "../../image/ze.png":item.ticketType == 4 ? "../../image/tuan.png":"../../image/dai.png"}}' mode='aspectFit'></image>
+        </view>
+        <view class='synopsisText'>
+          <view class='name'>{{item.storeName}}</view>
+          <view class='text'>{{item.ticketName}}</view>
+        </view>
+      </view>
+      <view class='use'>
+        <view class='circle topLeft'></view>
+        <view class='useBommon'>
+          <view class='bommon' bindtap='toDiauil' data-seq-id='{{item.ticketId}}'  data-store-id='{{item.storeId}}'>使用</view>
+        </view>
+        <view class='circle bottomLeft'></view>
+      </view>
+    </view>
+  </view>
+</view>

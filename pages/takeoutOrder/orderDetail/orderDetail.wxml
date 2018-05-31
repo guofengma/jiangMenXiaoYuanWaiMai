@@ -1,0 +1,128 @@
+<view class='content'>
+  <view class='content-left'>
+    <!-- <text>订单号: {{storeId}}</text> -->
+    <text>订单编号：{{orderDetail.orderSn}}</text>
+  </view>
+  <text class='content-right'>{{orderDetail.createTime}}下单</text>
+</view>
+
+<view class='content1'>
+  <view class='content1-left'>
+    <text>配送地址</text>
+
+  </view>
+  <text class='content1-right'>{{addrBean.schoolName}}{{addrBean.buildingName}} {{addrBean.addrDetail}}</text>
+</view>
+
+<view class='content2'>
+  <view class='content2-left'>
+    <text>收货人</text>
+
+  </view>
+  <text class='content2-right'>{{addrBean.linker}}</text>
+</view>
+<!--信息  -->
+<view style='  background-color: white;'>
+  <view class='message'>
+    <view class='message-name'>
+      <text>店铺</text>
+      <text class='mt2'>{{orderDetail.storeName}}</text>
+
+      <view class='message-name-right'>
+        <text>{{orderDetail.orderStateTxt}}</text>
+      </view>
+
+    </view>
+    <view class='message-num'>
+      <text>联系电话</text>
+      <text>{{orderDetail.storePhone1}}</text>
+    </view>
+    <view class='message-city'>
+      <text>详细地址</text>
+      <text>{{orderDetail.storeAddr}}</text>
+    </view>
+  </view>
+
+  <view class='message2' wx:if="{{sf == 'stu'}}">
+    <view class='message2-name'>
+      <text>收货人</text>
+      <text>{{addrBean.linker}}</text>
+    </view>
+    <view class='message2-num'>
+      <text>联系电话</text>
+      <text>{{addrBean.linkerPhone}}</text>
+    </view>
+    <view class='message2-city'>
+      <text>详细地址</text>
+      <text>{{addrBean.schoolName}}{{addrBean.buildingName}} {{addrBean.addrDetail}}</text>
+    </view>
+  </view>
+
+  <view class='message2' wx:else>
+    <view class='message2-name'>
+      <text>对接人</text>
+      <text>{{orderDetail.orderBuildManName}}</text>
+    </view>
+    <view class='message2-num'>
+      <text>联系电话</text>
+      <text>{{orderDetail.orderBuildManPhone}}</text>
+    </view>
+    <view class='message2-city'>
+      <text>详细地址</text>
+      <text>{{addrBean.schoolName}}{{orderDetail.buildingName}}</text>
+    </view>
+  </view>
+
+</view>
+<!--订单详情  -->
+<view class='order'>
+
+  <text class='order-header'>订单详情</text>
+  <view wx:for="{{goodsList}}">
+    <view class='order-list'>
+      <view class='order-content'>
+        <image src='{{item.goodsImg}}'></image>
+        <view>
+          <view class='order-con-right'>
+            <text class='ot1'>{{item.goodsName}}</text>
+            <text class='ot2'>￥{{item.goodsPrice}}</text>
+          </view>
+          <view class='order-right-num'>
+            <text>x{{item.goodsNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!--餐盒费  -->
+<!-- <view class='cost1'>
+  <text>餐盒费</text>
+  <text>￥1</text>
+</view> -->
+
+<!--配送费   -->
+<view class='cost2'>
+  <text>配送费</text>
+  <text>￥{{orderDetail.deliveryFee}}</text>
+</view>
+<!--合计  -->
+<view style='  background-color: white;'>
+  <view class='cost3'>
+    <text>合计</text>
+    <text>￥{{orderDetail.orderPrice}}</text>
+  </view>
+</view>
+
+<!--按钮  -->
+<view class='but-box'>
+
+<button class='but' bindtap='changeOrderState' wx:if="{{orderDetail.orderState == 2 && sf== 'pt'}}" data-order-State="3">取货</button>
+<button class='but' bindtap='changeOrderState' wx:if="{{orderDetail.orderState == 2 && sf== 'stu'}}" data-order-State="3">取货</button>
+
+<!-- <button class='but' bindtap='changeOrderState' wx:if="{{orderDetail.orderState == 3 && sf== 'pt'}}" data-order-State="4">送达提醒</button> -->
+<button class='but' wx:if="{{orderDetail.orderState == 3 && sf== 'pt'}}" data-order-State="4">送达提醒</button>
+<button class='but' bindtap='changeOrderState' wx:if="{{orderDetail.orderState == 3 && sf== 'stu'}}" data-order-State="4">已送达</button>
+</view>

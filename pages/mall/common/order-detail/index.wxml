@@ -1,0 +1,26 @@
+<!--订单详情 收货地址  -->
+<template name="order-detail">
+<!-- <view class="sel_address" wx:if="{{true}}">
+     
+</view> -->
+  <view class="detail_nav" wx:if="{{true}}">
+    <view class="protion_img">
+      <image src="/images/shop/gps.png" class="gps_bg"></image>
+    </view>
+    <view class="order_user">
+      <view class="user_name">
+        <text class="user">收货人：{{userName}}</text>
+        <text class="phone_number">{{telNumber}}</text>
+      </view>
+
+      <view class="order_addrss" bindtap="selAddress">
+        <text> 收货地址：{{userAddr}}</text>
+          <image src="/images/public/right.png" class="right_img"></image>
+      </view>
+    </view>
+  </view>
+
+   <view class="view_img"></view> 
+
+
+</template>

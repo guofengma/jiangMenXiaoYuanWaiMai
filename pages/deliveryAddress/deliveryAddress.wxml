@@ -1,0 +1,49 @@
+<view class='box' wx:for="{{bean}}" wx:key="b" bindtap='getAddressData' data-seq-Id="{{item.seqId}}" data-currid='{{index}}'>
+  <view class='message'>
+    <view>
+      <view class='message-content'>
+        <text>{{item.linker}}</text> 
+        <text>{{item.linkerPhone}}</text>
+      </view>
+      <text>{{item.schoolName}}{{item.buildingName}}{{item.addrDetail}}</text>
+    </view>
+
+  </view>
+  <view class='address' >
+    <view 
+       data-seq-Id="{{item.seqId}}" 
+       data-is-Deft="{{item.isDeft}}" 
+       catchtap='checkboxChange'
+    >
+       <!-- <checkbox-group 
+        bindchange="checkboxChange" 
+        data-seq-Id="{{item.seqId}}" 
+        data-is-Deft="{{item.isDeft}}" 
+      >
+        <label class="checkbox" >
+      
+          <checkbox value="{{item.isDeft}}" checked='{{item.isDeft==1?true:false}}'/>
+          <text class="{{item.isDeft? 'site':''}}">默认地址</text>
+        </label>
+      </checkbox-group> -->
+      <image class='mr-state-icon' mode='widthFix' src="{{item.isDeft==1?'/images/xz.png':'/images/wxz.png'}}"></image>
+     <text class="{{item.isDeft? 'site':''}}">默认地址</text>
+      </view>
+    <view 
+      class='caozuo'
+      catchtap='redact' 
+      data-index="{{index}}"
+    >
+      <view>
+        <image class='icon' style=' margin-right: 10rpx;' src='/images/shop/bj@2x.png'></image>
+        <text>编辑</text>
+      </view>
+      <view style=' margin-left: 30rpx;' data-seq-Id="{{item.seqId}}" catchtap='confirmDelete'  >
+        <image class='icon' src='/images/shop/sc@2x.png' style=' margin-right: 10rpx;'></image>
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='addsite' bindtap='addSite'>添加新地址</view>

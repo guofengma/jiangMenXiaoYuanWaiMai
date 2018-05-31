@@ -1,0 +1,11 @@
+<view class="sign-box">
+   <view class='sign-tit'>配送员登录</view> 
+  <input class='sign-input userPhone' data-str="manPhone" bindinput='saveInput' placeholder='请输入手机号码'></input>
+  <input class='sign-input' data-str="manPwd" type='password' bindinput='saveInput' placeholder='请输入密码'></input>
+  <!-- <view class='form-box'>
+    <input class='codeinput' data-str="smsCode" bindinput='saveInput' placeholder='请输入密码'></input>
+    <text class="getcodebtn {{is_show?'show':'hide'}}" bindtap='getCode'>获取验证码</text>
+    <text class="getcodebtn {{is_show?'hide':'show'}}">重新发送{{last_time}}秒</text>
+  </view> -->
+  <button class='btn' bindtap='deliveryLogin'>登录</button>
+</view> 

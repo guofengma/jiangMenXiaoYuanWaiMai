@@ -1,0 +1,44 @@
+  <swiper class='swiper' indicator-dots="false" autoplay="true" interval="5000" duration="1000" circular="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#010101">
+    <block wx:for="{{slideImgs}}" wx:key="s">
+      <swiper-item data-link="{{item.slideLink}}" bindtap="toLink">
+        <image src="{{item.imgUrl}}" class="slide-image" mode='aspectFill' ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+<!--图片导航  -->
+<view class='content' style='margin-top: 50rpx;' bindtap='toTakeoutOrder'>
+<image class='content-img1' src='/images/1.jpg'></image>
+<image class='content-img2' src='/images/kc.png'></image>
+<view class='content-text'>
+<text class='it1'>尊享外卖</text>
+<text class='it2'>delicacy</text>
+</view>
+</view>
+
+<view class='content' bindtap='toMallIndex'>
+<image class='content-img1' src='/images/2.jpg'></image>
+<image class='content-img2' src='/images/sc.png'></image>
+<view class='content-text'>
+<text class='it1'>乐购商城</text>
+<text class='it2'>Shopping</text>
+</view>
+</view>
+
+<view class='content' bindtap='toCitywide'>
+<image class='content-img1' src='/images/3.jpg'></image>
+<image class='content-img2' src='/images/dr.png'></image>
+<view class='content-text'>
+<text class='it1'>交流部落</text>
+<text class='it2'>Community</text>
+</view>
+</view>
+
+<view class='content' bindtap='toCampusBulletin'>
+<image class='content-img1' src='/images/4.jpg'></image>
+<image class='content-img2' src='/images/zx.png'></image>
+<view class='content-text'>
+<text class='it1'>最新资讯</text>
+<text class='it2'>Information</text>
+</view>
+</view>

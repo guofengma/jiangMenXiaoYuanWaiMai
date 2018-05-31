@@ -1,0 +1,49 @@
+<import src="../../common/order-detail/index"/>
+<import src="../../common/detail/detail"/>
+<import src="sales-address/index"/>
+
+<view class="address">
+ <template is="order-detail" data="{{...orderDetail}}"></template>
+</view>
+
+<view class="order_goods">
+<block wx:for="{{goodsList}}" wx:for-item="item">
+<view class="goods_bg">
+<image src="{{item.goodsImg}}" class="goods_img"></image>
+<view class="goods_pri">
+<view class="cart-goodstxt content_txt">{{item.goodsName}}</view>
+<view class="pri_bg">
+<text class="price">¥{{item.goodsPrice}}</text>
+<text>×{{orderDetail.goodsNum}}</text>
+</view>
+</view>
+</view>
+</block>
+</view>
+
+<view class="goods_detail">
+<template is="detail" data="{{...orderDetail,goodsId}}"></template>
+</view>
+
+<view class="goods_btn" wx:if="{{orderDetail.orderState==1}}"
+>
+ <text >合计：</text>
+ <text class="all-price">¥{{orderDetail.orderPrice}}</text>
+ <view class="pay_btn" bindtap="payTab">
+ <text>立即支付</text>
+ </view>
+
+</view>
+
+<!-- <view class="goods_btn" wx:if="{{orderDetail.orderState==4}}"
+ bindtap="couponTab">
+<text>评价</text>
+</view> -->
+
+<view class="goods_btn" wx:if="{{orderDetail.orderState==3}}" >
+<text >合计：</text>
+ <text class="all-price">¥{{orderDetail.orderPrice}}</text>
+ <view class="pay_btn" bindtap="takeTab">
+ <text>确认收货</text>
+ </view>
+</view>

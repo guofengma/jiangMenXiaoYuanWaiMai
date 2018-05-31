@@ -1,0 +1,61 @@
+ <view class="mystore-top">
+  <image class='store-logo' mode="widthFix" src="{{bean.storeImg}}"></image>
+  <text class='store-name'>{{bean.storeName}}</text>
+</view>
+<view class='lines-box'>
+  <view class='sales-title'>
+    <image class='line-icon store-order' mode="widthFix" src="/images/takeout/xse.png"></image>
+    <text class='store-option line-text'>店铺销售额</text>
+  </view>
+
+
+
+  <view class='sales'>
+    <view class='left-sum'>
+      <text>今日配送单数</text>
+    </view>
+    <text class='sum'>{{deliveryNum}}</text>
+  </view>
+  <view class='sales'>
+    <view class='left-sum'>
+      <text>今日销售额</text>
+    </view>
+    <text class='sum'>{{saleDay}}</text>
+    <text>元</text>
+  </view>
+
+  <view class='sales'>
+  <view class='left-sum'>
+    <text>本月销售额</text>
+  </view>
+    <text class='sum'>{{saleMonth}}</text>
+    <text>元</text>
+  </view>
+</view>
+
+<view class='line-box' bindtap='toStoreSales'>
+<view class='line-style'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/js.png"></image>
+  <text class='store-option line-text'>店铺销售结算</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+</view>
+<view class='line-box' bindtap='toStoreOrder'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/dpdd.png"></image>
+  <text class='store-option line-text'>店铺销售明细</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+<view class='line-box' bindtap='toStoreGoodsMinXi'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/dpdd.png"></image>
+  <text class='store-option line-text'>销售商品明细统计</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+<view class='line-box interval' bindtap='toStoreComment'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/fw.png"></image>
+  <text class='store-option line-text'>店铺评价</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+<view class='line-box' bindtap='logout'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/tc.png"></image>
+  <text class='store-option line-text'>退出登录</text>
+</view> 

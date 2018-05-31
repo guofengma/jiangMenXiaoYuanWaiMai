@@ -1,0 +1,176 @@
+@import "../common/order-detail/index.wxss";
+@import "../common/detail/detail.wxss";
+
+.btop{
+  border-top: solid 1rpx #f2f2f2;
+}
+.top_bg {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+
+.save-img {
+  height: 180rpx;
+  width: 240rpx;
+}
+
+.goods-pri {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  justify-content: space-around;
+  width: 490rpx;
+}
+.goods-name{
+  font-size: 30rpx;
+  line-height: 1.5;
+  color:#333;
+  width: 490rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.oreder_goods {
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+  width: 100%;
+}
+
+.goods_agrument {
+  padding: 0 20rpx;
+  margin-bottom: 120rpx;
+}
+
+.sel_coupon {
+  display: flex;
+  align-items: center;
+}
+
+.coupon_txt {
+  width: 180rpx;
+  margin-right: 20rpx;
+}
+
+.coupon_img {
+  height: 30rpx;
+  width: 16rpx;
+}
+
+.user_say_bg {
+  height: 80rpx;
+  border-bottom: solid 1rpx #f2f2f2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.goods_name {
+  font-size: 32rpx;
+}
+
+.user_say {
+  margin-left: 20rpx;
+  flex: 1;
+  font-size-adjust: 32rpx;
+  height: auto;
+}
+
+.pla_user_say {
+  color: #ccc;
+}
+
+.cart_footer_bg {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  background-color: #f2f2f2;
+  color: #666;
+  padding-left: 10rpx;
+  align-items: center;
+  font-size: 32rpx;
+  justify-content: flex-end;
+}
+
+.all_color {
+  color: red;
+  margin-right: 20rpx;
+}
+
+.freght-price {
+  color: red;
+}
+
+.all_sub_txt {
+  width: 240rpx;
+  height: 90rpx;
+  background-color: #da251c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.drawer_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.sel_coupon_bg {
+  height: 80%;
+}
+
+.coupon_txt_bg {
+  margin-top: 20rpx;
+  height: 120rpx;
+  text-align: center;
+}
+
+.coupon_list {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1rpx gainsboro;
+  height: 80rpx;
+  font-size: 32rpx;
+  align-items: center;
+}
+
+.finsh {
+  margin-top: 80rpx;
+  height: 90rpx;
+  background-color: #28c5be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #fff;
+}

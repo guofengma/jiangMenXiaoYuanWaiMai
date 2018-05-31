@@ -1,0 +1,80 @@
+page{
+	background: #ecebeb;
+}
+.section{
+	padding:20rpx;
+	background: #fff;
+	margin-top: 20rpx;
+	border-bottom: 1px solid #e3e2e2;
+	font-size: 32rpx;
+}
+.section-icon{
+	width: 16rpx;
+	height: 30rpx;
+	margin-top: 6rpx;
+}
+.words-box{
+	width: 100%;
+	padding: 30rpx 20rpx;
+	background: #fff;
+	font-size: 32rpx;
+	box-sizing: border-box;
+	height: 360rpx;
+}
+.upload-box{
+	padding: 30rpx 0;
+	background: #fff;
+	margin-bottom: 30rpx;
+}
+.upload-item{
+	display: inline-block;
+	width: 140rpx;
+	height: 140rpx;
+	margin: 0 20rpx;
+	position: relative;
+}
+.up-img{
+	width: 140rpx;
+	height: 140rpx;
+}
+.up-dlete{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 26rpx;
+	background-color:rgba(0,0,0,0.25);
+}
+.up-add{
+	width: 140rpx;
+	height: 140rpx;
+}
+.line-box{
+	background: #fff;
+	height: 98rpx;
+	display: flex;
+	align-items: center;
+	font-size: 32rpx;
+	border-bottom: 1px solid #e8e6e6;
+	padding: 0 20rpx;
+}
+.line-icon{
+  width: 24rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.right-arrow{
+  	width: 16rpx;
+	height: 30rpx;
+}
+.line-cont{
+	width: 630rpx;
+	margin-right: 20rpx;
+}
+.issue-phoner-box{
+	margin-bottom: 60rpx;
+}
+.issue-btn{
+	margin: 30rpx;
+	background: #da251c;
+	color: #fff;
+}

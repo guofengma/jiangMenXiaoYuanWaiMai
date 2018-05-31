@@ -1,0 +1,71 @@
+<view hidden='{{showreason}}'>
+  <view class='person'>
+    <text>收货人</text>
+    <input class='write' placeholder="请输入收货人名称" auto-focus bindinput="bindNameInput" />
+  </view>
+
+  <view class='person'>
+    <text>手机号码</text>
+    <input class='write' style="  margin-left: 70rpx;" placeholder="请输入收货人手机号码" auto-focus bindinput="bindNumInput" />
+  </view>
+
+  <view class='address' bindtap='listenerActionSheet'>
+    <text style="width:140rpx;">选择位置</text>
+    <view class='address-wri'>
+
+      <view class="address-content">
+
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{schoolList}}" range-key="schoolName">
+          <view class="picker">
+            {{show}}{{schoolList[index].schoolName}}
+          </view>
+        </picker>
+      </view>
+
+
+
+    </view>
+    <!-- <image src='/imsges/shop/right.png'></image> -->
+  </view>
+  <view class="address-show">
+    <view>
+      <view class="address-content">
+
+        <picker bindchange="bindPickerBuildChange" value="{{buildIndex}}" range="{{shchoolBuildList}}" range-key="buildName">
+          <view class="picker">
+            {{showBuild}}{{shchoolBuildList[buildIndex].buildName}}
+          </view>
+        </picker>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+<view class='person'>
+    <text>详细地址</text>
+    <input class='write' style="  margin-left: 70rpx;" placeholder="请输入详细地址" bindinput="saveAddrDetail" />
+  </view>
+
+
+<!--上拉  -->
+
+<!--学校  -->
+
+<!-- <view class='menu' hidden='{{actionSheetHidden}}'>
+  <view class='hander'>
+    <text bindtap='listenerActionSheet'>取消</text>
+    <text>{{selects}}</text>
+  </view>
+  <scroll-view scroll-y style="height: 484rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}">
+
+    <view class='list' wx:for="{{10}}" bindtap='toTower'>
+      <text>wuyidaxue</text>
+    </view> 
+  </scroll-view>
+</view> -->
+
+
+
+<view class='addsite' bindtap='addAdress'>确认添加</view>

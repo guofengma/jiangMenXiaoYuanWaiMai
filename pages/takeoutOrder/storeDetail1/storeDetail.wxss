@@ -1,0 +1,544 @@
+page{
+  background-color: #f8f8f8;
+  height: 100%;
+}
+.storeDetail{
+  height: 100%;
+}
+.header{
+  height: 150rpx;
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+}
+.header .leftImg{
+  margin-left: 20rpx;
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.header .leftImg image{
+  width: 100rpx;
+  height:100rpx;
+}
+.header .rightText{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.header .rightText .fateView{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 100%;
+  font-size: 20rpx;
+  color: white;
+}
+.header .rightText .noticeView{
+  margin-top: 15rpx;
+  display: flex;
+  align-content: center;
+}
+
+.header .rightText .noticeView .noticeImg{
+  display: flex;
+  align-items: center;
+}
+.header .rightText .noticeView .noticeImg image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.header .rightText .noticeView .noticeText{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: white;
+}
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+ font-size: 28rpx;
+font-weight: bold;
+ color: #4b4b4b;
+border-bottom: 1rpx solid #cfcece;  
+height: 88rpx;
+margin-bottom: 20rpx;
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 88rpx; 
+} 
+.navbar .item.active{ 
+ color:#e22319; 
+} 
+
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height:4rpx; 
+ background: #e22319; 
+} 
+swiper{
+  height: calc(100% - 260rpx);
+}
+swiper-item{
+  overflow: auto;
+}
+.main {
+  position: relative;
+  background-color: white;
+  display:flex;
+  /* height: calc(100% - 100rpx); */
+  height:100%;
+}
+.categroy-left {
+  float: left;
+  width: 200rpx;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #e7e7e7;
+  color: #666;
+  /*height: 427rpx;*/
+}
+
+.categroy-left .cate-list {
+  height: 120rpx;
+  width: 200rpx;
+  line-height: 120rpx;
+  text-align: center;
+  border-bottom: solid #f2f2f2 1rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.categroy-left .cate-list.on {
+  color: #da251c;
+  background-color: #fff;
+}
+
+.categroy-right {
+  flex: 1;
+  padding-left: 30rpx; 
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rpx;
+}
+.categroy-right .titleView{
+  display: flex;
+  height: 20rpx;
+  border-left: 2rpx solid #eeb21c;
+}
+
+.categroy-right .titleView .storeName{
+  padding-left: 10rpx;
+  font-size: 20rpx;
+  color: #1a1a1a;
+  line-height: 100%;
+}
+
+.categroy-right .cate-box {
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.categroy-right .cate-box .product-list {
+  display: flex;
+  width: 100%;
+  height: 175rpx;
+  position: relative;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+.categroy-right .cate-box .product-list .leftImg{
+  display: flex;
+  align-items: center;
+} 
+.categroy-right .cate-box .product-list .leftImg image{
+  width: 125rpx;
+  height: 125rpx;
+}
+
+.categroy-right .cate-box .product-list .rightText{
+  flex: 1;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.categroy-right .cate-box .product-list .rightText .foodName{
+  font-size: 30rpx;
+  color: #1a1a1a;
+  line-height: 100%;
+}
+.categroy-right .cate-box .product-list .rightText .foodSale{
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: #515151;
+  line-height: 100%;
+}
+.categroy-right .cate-box .product-list .rightText .foodPrice{
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  color: #fd372d;
+  line-height: 100%;
+}
+.categroy-right .cate-box .product-list .changeNum{
+  position: absolute;
+  right: 20rpx;
+  bottom: 26rpx;
+  display: flex;
+  align-items: center ;
+  height: 50rpx;
+  /* height: 30rpx;
+  width: 120rpx;
+  background-color: rebeccapurple; */
+}
+
+.categroy-right .cate-box .product-list .changeNum image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.categroy-right .cate-box .product-list .changeNum .input{
+  width: 60rpx;
+  text-align: center;
+  height: 50rpx;
+}
+.cartFoot{
+  height: 100rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  /* background-color: rebeccapurple; */
+  z-index: 10;
+}
+.cartFoot .commitOrder{
+  margin-right: 0rpx;
+  width: 250rpx;
+  background-color: #e22319;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: white;
+  height: 100%;
+
+}
+.cartFoot .fateView{
+  flex: 1;
+  position: relative;
+  display: flex;
+  background: #333333;
+}
+.cartFoot .fateView .cartView{
+  margin-left: 44rpx;
+  margin-bottom: 26rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.cartFoot .fateView .cartView image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.cartFoot .fateView .textView{
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.cartFoot .fateView .textView .fateText{
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  color: white;
+  line-height: 100%;
+
+}
+.cartFoot .fateView .textView .sendFate{
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: white;
+  line-height: 100%;
+}
+.evaluate{
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50rpx;
+}
+.evaluate .shopScore{
+  height: 160rpx;
+  display: flex;
+  background-color: white;
+}
+.evaluate .shopScore .scoreDetail{
+  margin-left: 58rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.evaluate .shopScore .scoreDetail .scoreText{
+  font-size: 56rpx;
+  color: #e82576;
+  line-height: 100%;
+  text-align: center;
+}
+.evaluate .shopScore .scoreDetail .shopText{
+  margin-top:10rpx;
+  font-size: 24rpx;
+  color: #5c5c5c;
+  line-height: 100%;
+}
+.evaluate .shopScore .scoreStar{
+  flex: 1;
+  margin-left: 65rpx;
+  display: flex;
+  align-items: center;
+}
+.firstStar image,.secondStar image,.thirdStar image,.fouthStar image,.fifthStar image{
+  width: 40rpx;
+  height: 40rpx;
+}
+ .secondStar,.thirdStar,.fouthStar,.fifthStar{
+  margin-left: 12rpx;
+} 
+.evaluate .scoreType{
+  margin-top: 10rpx;
+  height: 128rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color:white;
+}
+ .all{
+   background-color: #fff8e8;
+   border: 1rpx solid #ffd155;
+ }
+ .positive,.moderate,.negative{
+   border: 1rpx solid #cbcbcb;
+   
+ }
+ .all,.positive,.moderate,.negative{
+   margin-left: 20rpx;
+   font-size: 30rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 162rpx;
+   height: 68rpx;
+   color: #4b4b4b;
+} 
+.evaluate .comment{
+  margin-top: 10rpx;
+  width: 100%;
+  background-color: white;
+}
+.evaluate .comment .commentItem{
+  display: flex;
+  flex-direction: column;
+}
+.evaluate .comment .commentItem .userInfo{
+  display: flex;
+}
+.evaluate .comment .commentItem .userInfo .userImg{
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+}
+.evaluate .comment .commentItem .userInfo .userImg image{
+  width: 68rpx;
+  height:68rpx;
+  border-radius: 50%;
+}
+.evaluate .comment .commentItem .userInfo .userView{
+  flex: 1;
+  margin-left: 20rpx;
+  margin-top: 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+.evaluate .comment .commentItem .userInfo .userView .nameView {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.evaluate .comment .commentItem .userInfo .userView .nameView .userName{
+  flex: 1;
+}
+.nameView .commentTime{
+  margin-right: 30rpx;
+}
+.nameView .userName,.nameView .commentTime{
+  font-size: 26rpx;
+  color: #515151;
+  line-height: 100%;
+}
+.evaluate .comment .commentItem .userInfo .userView .scoreStar{
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  height: 30rpx;
+}
+.userView .scoreStar .firstStar image,.userView .scoreStar .secondStar image,.userView .scoreStar .thirdStar image,.userView .scoreStar .fouthStar image,.userView .scoreStar .fifthStar image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.evaluate .comment .commentItem .commentDetail{
+  margin-top: 30rpx;
+  width: 100%;
+
+}
+.evaluate .comment .commentItem .commentDetail .commentText{
+  margin-left: 108rpx;
+  width: 610rpx;
+  font-size: 30rpx;
+  color: #515151;
+  padding-bottom: 36rpx;
+  border-bottom: 1rpx solid #e6e4e4;
+} 
+.no_data{
+  font-size:28rpx;
+  color: #666;
+  text-align: center;
+  margin-top:20rpx; 
+}
+
+
+
+/*商家*/
+.store-info{
+ background: #fff;
+ margin-bottom: 20rpx;
+}
+.store-contact{
+  height: 120rpx;
+  margin: 0 20rpx;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.store-addr-icon{
+  width: 26rpx;
+  height: 34rpx;
+  margin-right: 20rpx;
+}
+.store-addr{
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: 600;
+  position: relative;
+  width: 590rpx;
+  padding-right:20rpx;
+  box-sizing:border-box;
+  margin-right:30rpx;
+}
+.store-addr:after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5rpx;
+  display: block;
+  width: 4rpx;
+  height: 30rpx;
+  background: #666;
+}
+.call-icon{
+  width: 34rpx;
+  height: 34rpx;
+}
+.store-imgs{
+  padding: 20rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.store-img{
+  width: 170rpx;
+  height: 140rpx;
+  margin-right: 10rpx;
+}
+.store-img:nth-child(4){
+  margin-right: 0;
+}
+.open-time-box{
+  height: 88rpx;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.time-icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+.store-synopsis-box{
+  background: #fff;
+  padding: 20rpx;
+}
+.store-synopsis{
+  font-size: 30rpx;
+  line-height: 44rpx;
+}
+
+.store-star{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+.comment-star{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 12rpx;
+}
+
+/*弹框显示商品详情*/
+.shade{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 2;
+}
+.pro-box{
+  width: 650rpx;
+  margin-left:50rpx;
+  margin-top:180rpx;
+  padding: 0;
+  background: #fff;
+}
+.pro-img{
+  width: 650rpx;
+  height: 445rpx;
+  display: block;
+}
+.pro-info{
+  padding: 20rpx;
+  background: #fff;
+}
+.pro-item{
+  margin-bottom: 20rpx;
+  display: inline-block;
+  width: 100%;
+}
+.pro-name{
+  font-size: 32rpx;
+}
+.pro-desc,.pro-sales{
+  font-size: 28rpx;
+  color: #666;
+}
+.pro-price{
+  font-size: 32rpx;
+  color: #e22319;
+  font-weight: 600;
+}
+

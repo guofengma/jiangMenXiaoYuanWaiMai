@@ -1,0 +1,40 @@
+
+<import src="../common/discuss/index"/>
+
+<view class="navbar none"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text> 
+</view> 
+<view class="nav_hei"></view>
+
+
+<!-- <view class="discuss_footer" wx:if="{{currentTab==0}}">
+<block wx:for="{{list}}" wx:for-item="item">
+<view class="good_discuss" wx:if="{{item.evaLevel==4 || item.evaLevel==5 }}">
+<template is="discuss" data="{{...item}}"></template>
+</view>
+</block>
+</view>
+
+<view class="discuss_footer" wx:if="{{currentTab==1}}">
+<block wx:for="{{list}}" wx:for-item="item">
+<view class="good_discuss" wx:if="{{item.evaLevel==2 || item.evaLevel==3 }}">
+<template is="discuss" data="{{...item,evaLevel}}"></template>
+</view>
+</block>
+</view>
+
+<view class="discuss_footer" wx:if="{{currentTab==2}}">
+  <block wx:for="{{list}}" wx:for-item="item">
+    <view class="good_discuss" wx:if="{{item.evaLevel==0 || item.evaLevel==1}}">
+      <template is="discuss" data="{{...item,evaLevel}}"></template>
+    </view>
+  </block>
+</view> -->
+<view class="discuss_footer">
+  <block wx:for="{{list}}" wx:for-item="item">
+    <view class="good_discuss">
+      <template is="discuss" data="{{...item,evaLevel}}"></template>
+    </view>
+  </block>
+</view>
+

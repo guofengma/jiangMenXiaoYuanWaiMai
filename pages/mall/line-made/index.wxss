@@ -1,0 +1,32 @@
+.made{
+  padding: 0 20rpx;
+}
+.phone{
+  height: 90rpx;
+  border-bottom: solid 1rpx #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  color: #333;
+  font-size: 28rpx;
+  
+}
+.time{
+   height: 90rpx;
+  border-bottom: solid 1rpx #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #333;
+  font-size: 28rpx;
+}
+.call-bg image{
+  margin-left: 10rpx;
+   height: 24rpx;
+   width: 24rpx;
+}
+.bg{
+   color: #333;
+  font-size: 28rpx;
+}

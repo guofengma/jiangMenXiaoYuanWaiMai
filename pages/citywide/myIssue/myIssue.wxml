@@ -1,0 +1,45 @@
+<!--信息列表  -->
+<view class='list-box'>
+
+
+  <view class='list-item' bindtap='todetail' wx:for="{{list}}" data-artid="{{item.seqId}}" wx:key="l">
+    <view class='item-head'>
+      <image class='author-pic' src="{{item.mbImg || '/images/gly.png'}}"></image>
+      <view class='author-con'>
+        <text class='author-name'>{{item.mbName || "管理员"}}</text>
+        <text class='article-time'>{{item.postTimeFmt}}</text>
+      </view>
+    </view>
+
+    <view class='article-container'>
+      <text>{{item.infoIntro}}</text>
+      <view class='article-img-box'>
+        <image class='article-img' wx:for="{{item.imgList}}" wx:for-index="idx" wx:for-item="itemName" wx:if="{{idx < 3}}" src="{{itemName.imgPath}}"></image>
+        
+      </view>
+    </view>
+
+    <view class='item-foot clearfix'>
+      <view class='art-addr-box'>
+        <image class='art-addr-icon' src="/images/citywide/location.png"></image>
+        <text class='art-addr'>{{item.postAddr}}</text>
+      </view>
+      <view class='article-info fr'>
+        <view class='article-info-item art-view'>
+          <image class='article-info-icon art-view-icon' src="/images/citywide/view.png"></image>
+          <text class='art-view-num'>{{item.viewNum}}</text>
+        </view>
+        <view class='article-info-item art-comment'>
+          <image class='article-info-icon art-comment-icon' src="/images/citywide/msg.png"></image>
+          <text class='art-comment-num'>{{item.replyNum}}</text>
+        </view>
+        <view class='article-info-item art-praise'>
+          <image class='article-info-icon art-praise-icon' src="/images/citywide/zan.png"></image>
+          <text class='art-praise-num'>{{item.likeNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="noData" wx:if="{{!list.length}}">暂无数据</view>
+</view>

@@ -1,0 +1,54 @@
+
+@import "../../common/order-detail/index.wxss";
+@import "../../common/detail/detail.wxss";
+
+.cart-goodstxt{
+  font-size: 32rpx;
+  height: 72rpx;
+  line-height: 36rpx;
+  color: #666;
+}
+.goods_detail {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-bottom: 110rpx;
+}
+.order_goods{
+  margin:20rpx 0;
+  padding: 0 20rpx;
+  
+}
+/*文字超出3行设置...*/
+.content_txt {
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+.goods_btn {
+  height: 90rpx;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content:flex-end ;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  font-size: 32rpx;
+  color: #333;
+}
+.pay_btn{
+  color: #FFF;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220rpx;
+  background-color: #e22319;
+}
+.all-price{
+  margin-right: 180rpx;
+  color: red;
+}

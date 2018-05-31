@@ -1,0 +1,39 @@
+page{
+	background: #f1f1f1;
+	font-size: 28rpx;
+}
+.store-sales-box{ 
+	 padding-top: 10rpx;
+}
+.sales-item{
+	height: 110rpx; 
+	padding: 0 30rpx;
+  margin: 10rpx 0;
+	background: #fff;
+}
+.sales-top{
+  flex: 1;
+  display: flex;
+  justify-content:space-between ;
+}
+.sales-top .sum{
+  color:#E82576; 
+}
+.sales-top .sales-unit{
+  color: #666666;
+  font-size: 22rpx;
+}
+.sales-bottom{
+  display: flex;
+  justify-content:space-between;
+}
+.sales-bottom .sales-count{
+  color: #666666;
+  font-size: 24rpx;
+}
+.status{
+  color: #e2653e;
+}
+.sales-top,.sales-bottom{
+  padding-top: 10rpx;
+}

@@ -1,0 +1,28 @@
+
+<import src="../common/goods/goods"/>
+<view class="list_nav " >
+<view class=" composite {{ show?'activite':'no'}}" bindtap="onAvtite">
+<picker mode="selector" class="composite" bindchange="toComposite"
+value="{{index}}" range="{{array}}">
+{{array[index]}}<image src="{{show?'/image/up.png':'/image/doaw.png'}}" class="up_img"></image>
+</picker>
+</view>
+<view class="composite {{ show?'no':'activite'}}"  bindtap="toSalesTab">销量</view>
+</view>
+<view class="list"></view>
+<view wx:if="{{goodsList.length!=0}}">
+
+<view class="newest-box" >
+<block wx:for="{{goodsList}}" wx:for-item="item">
+ <view class="newest-list" >
+    <template is="goods" data="{{...item}}"></template>
+</view>
+</block>
+</view>
+</view>
+
+<view  wx:else class="no_data">暂无数据</view>
+
+
+
+

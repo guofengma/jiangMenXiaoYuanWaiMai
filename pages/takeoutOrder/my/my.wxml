@@ -1,0 +1,6 @@
+<import src="/pages/template/tabbar/tabbar.wxml" />
+<import src="/pages/template/my/my.wxml" />
+
+	<template is="my" data="{{userInfo}}"></template>
+
+	<template is="tabbar" data="{{tabbar}}"></template>

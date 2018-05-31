@@ -1,0 +1,34 @@
+<view class="discuss_bg">
+  <textarea bindblur="bindTextAreaBlur" placeholder="说点什么吧" maxlength="180" placeholder-class="discuss_txt" class="text" />
+  <view class="discuss_img" style='display:none;'>
+    <block wx:for="{{tempFilePaths}}" wx:for-item="item">
+      <image src="{{item}}" class="add_img"></image>
+    </block>
+    <image src="/image/plue.png" class="add_img" bindtap="addImgTab"></image>
+  </view>
+
+</view>
+<!-- <view class="start_bg">
+  <text>评分</text>
+  <view class="image_bg">
+    <image src="{{tabArr.curHdIndex >'0'? selectedSrc : normalSrc}}" data-id="1" bindtap="chooseicon"></image>
+    <image src="{{tabArr.curHdIndex >'1'? selectedSrc : normalSrc}}" data-id="2" bindtap="chooseicon"></image>
+    <image src="{{tabArr.curHdIndex >'2'? selectedSrc : normalSrc}}" data-id="3" bindtap="chooseicon"></image>
+    <image src="{{tabArr.curHdIndex >'3'? selectedSrc : normalSrc}}" data-id="4" bindtap="chooseicon"></image>
+    <image src="{{tabArr.curHdIndex >'4'? selectedSrc : normalSrc}}" data-id="5" bindtap="chooseicon"></image>
+  </view>
+
+</view> -->
+<view class="start_bg" style='display:none;'>
+  <text>评分</text>
+  <view class="image_bg">
+    <block wx:for="{{imgUrl}}">
+      <image src="{{item.isActive? item.selectedSrc : item.normalSrc}}" data-index="{{index}}" bindtap="chooseicon"></image>
+    </block>
+  </view>
+</view>
+
+
+<view class="goods_btn" bindtap="saveEvaluate">
+  <text>提交</text>
+</view>

@@ -1,0 +1,73 @@
+.detail_goods{
+ font-size: 32rpx;
+ width: 100%;
+}
+.btap{
+  border-top: solid 2rpx #f2f2f2;
+}
+.goods_bg{
+  height:200rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+
+}
+.goods_img{
+  height:180rpx;
+  width:240rpx;
+}
+.goods_pri{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  justify-content: space-around;
+   width: 490rpx;
+}
+.pri_bg{
+display: flex;
+flex-direction: row;
+align-items: center;
+color: #333;
+}
+.price{
+  color: red;
+  /* flex: 1; */
+  font-size: 32rpx;
+}
+
+.good-num{
+  margin-left: auto;
+}
+
+.state{
+  margin-left:120rpx;
+  height: 50rpx;
+  width: 120rpx;
+  background-color:#28c5be;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+}
+.goods_color{
+  color: gray;
+}
+.nums{
+  height: 80rpx;
+  border-bottom: solid 2rpx #f2f2f2;
+  display: flex;
+  align-items: center;
+ width: 100%;
+ justify-content: space-between;
+ font-size: 32rpx;
+ color: #666;
+}
+.staus_txt{
+  color: #28c5be;
+}
+.price_txt{
+  color: red;
+}

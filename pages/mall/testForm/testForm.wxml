@@ -1,0 +1,14 @@
+<!--pages/testForm/testForm.wxml-->
+<!--pages/testForm/testForm.wxml-->
+
+<form bindsubmit="formSubmit" report-submit="true">
+	<view>
+		<input name="aa1" placeholder="这是一个input"></input>
+	</view>
+	<view>
+		<input name="bb2" placeholder="这是一个input"></input>
+	</view>
+	<view>
+		<button form-type='submit'>提交</button>
+	</view>
+</form>

@@ -1,0 +1,124 @@
+page{
+	background: #f1f1f1;
+	font-size: 28rpx;
+}
+.apply-top{
+	height: 200rpx;
+	text-align: center;
+	position: relative;
+}
+.apply-bg{
+	width: 100%;
+	height: 200rpx;
+}
+.apply-top text{
+	position: absolute;
+	line-height: 50rpx;
+	font-size: 32rpx;
+}
+.apply-cont{
+	position: relative;
+	background: #fff;
+	padding: 0 20rpx;
+	margin-bottom: 20rpx;
+}
+.apply-top text:nth-child(2){
+	left: 240rpx;
+	top: 60rpx;
+}
+.apply-top text:nth-child(3){
+	left: 170rpx;
+	top: 110rpx;
+}
+.apply-box{
+	position: absolute;
+	width: 150rpx;
+	height: 150rpx;
+	left: 20rpx;
+	top: 20rpx;
+	text-align: center;
+	background: #e9e8e8;
+	padding-top: 20rpx;
+}
+.view-box{
+	position: absolute;
+	width: 150rpx;
+	height: 150rpx;
+	left: 20rpx;
+	top: 20rpx;
+}
+.businessLicense{
+	width: 150rpx;
+	height: 150rpx;
+}
+.apply-box text{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 24rpx;
+	color: #919090;
+}
+.apply-img{
+	width: 90rpx;
+	height: 78rpx;
+}
+.line-box{
+	height: 100rpx;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	border-bottom: 1px solid #f1f1f1;
+}
+.apply-store,.apply-phone{
+	margin-left: 170rpx;
+}
+.line-box .name{
+	width: 150rpx;
+	margin-right: 20rpx;
+}
+.apply-logo-box{
+	background: #fff;
+	padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.logo-tit{
+	font-size: 30rpx;
+	font-weight: 600;
+	margin-bottom: 20rpx;
+}
+.logo-box{
+	width: 150rpx;
+	height: 150rpx;
+	border: 1px dotted #d2d0d0;
+	text-align: center;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	margin-right: 20rpx;
+}
+.add-icon{
+	width: 150rpx;
+	height: 150rpx;
+}
+.store-logo{
+	width: 150rpx;
+	height: 150rpx;
+}
+.right{
+	width: 16rpx;
+}
+.btn{
+	height: 98rpx;
+	line-height: 98rpx;
+	background: #e22319;
+	color: #fff;
+	font-size: 32rpx;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	text-align: center;
+	border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.apply-ckeck{
+	width: 510rpx;
+}

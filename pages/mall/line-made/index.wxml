@@ -1,0 +1,23 @@
+<view class="made">
+<view class="phone" bindtap="onCallTab">
+<text>定制设计工作室电话：0760-87838068</text>
+<view class="call-bg" >
+<image src="/image/right.png"></image>
+</view>
+</view>
+
+<view class="phone"  bindtap="onPhoneTab">
+<text>定制设计移动电话：18988574080</text>
+<view class="call-bg">
+<image src="/image/right.png"></image>
+</view>
+</view>
+<view class="time">
+<text>定制产品工作时间：</text>
+<text>周一至周五14:00-18：00</text>
+</view>
+
+<view class="bg">
+注：由于定制产品属于非标准产品，成本会拉高，生产周期会拉长，无法批量生产。
+</view>
+</view>

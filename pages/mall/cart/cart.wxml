@@ -1,0 +1,66 @@
+	<import src="/pages/template/tabbar/tabbar.wxml" />
+<view class="main">
+  <view wx:if="{{hasList}}">
+
+    <view class="cart_bg">
+      <view class="sel_all">
+        <icon wx:if="{{selectAllButton}}" type="success" data-statu="{{false}}"
+        color="red" class="cart-pro-select" bindtap="selectAll" />
+        <icon wx:else type="circle" data-statu="{{true}}" class="cart-pro-select" bindtap="selectAll" />
+        <text class="all_txt">全选</text>
+      </view>
+      <view class="clear" bindtap="deleteList">删除</view>
+    </view>
+    <view class="cart_goods">
+      <block wx:for="{{carts}}" wx:for-item='item'>
+        <view>
+          <template is="goodsOrder" data="{{...item,add_nums,staus}}"></template>
+        </view>
+      </block>
+    </view>
+    <view class="cart-box">
+      <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
+        <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" class="cart-pro-select" bindtap="selectList" />
+        <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList" />
+        <view class="goods_img">
+          <image src="{{item.goodsImg}}" class="cart-thumb"></image>
+          <view class="goods_txt">
+          <view class="cart-goodstxt content_txt">
+          <text>{{item.goodsName}}</text>
+          </view>
+            <view class="goods_price">
+              <text class="price">¥:{{item.goodsPrice}}</text>
+              <view class="add_sub">
+                
+                <view class="add" bindtap="minusCount" data-index="{{index}}">-</view>
+                <input type="number" class="input" value="{{item.num}}" disabled="false" />
+                <view class="add" bindtap="addCount" data-index="{{index}}">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="cart_footer_bg">
+      <view class="all_bg">
+        <text>合计：</text>
+        <text class="all_color">¥{{totalPrice}}</text>
+        <text class="clas_txt">(不含运费)</text>
+      </view>
+      <view class="all_sub">
+        <text>共{{nums}}件</text>
+        <view class="all_sub_txt" bindtap="toSaveTab">
+          <text>提交订单</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else>
+    <view class="cart-no-data">购物车是空的哦~</view>
+    <button class="btn" bindtap="toIndexTab">去逛逛</button>
+  </view>
+
+</view>
+	<template is="tabbar" data="{{tabbar}}"></template>

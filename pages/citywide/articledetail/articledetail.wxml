@@ -1,0 +1,80 @@
+<import src="/pages/mall/wxParse/wxParse.wxml"/> 
+<view class="article-detail-box">
+<!--头部  -->
+  <view class='article-author-box'>
+    <image class='article-author-pic' src="{{mbImg}}"></image>
+    <view class='article-author-info'>
+      <view class='article-authorandtime'>
+        <text class='article-author-name'>{{mbName}}</text>
+        <text class='article-author-time'>{{postTimeFmt}}</text>
+      </view>
+      <view class='article-addr-box'>
+        <image class='article-addr-icon' src="/images/citywide/location.png"></image>
+        <text class='article-addr'>{{postAddr}}</text>
+      </view>
+
+    </view>
+  </view>
+  <!--文章内容  -->
+  <view class='article-container'>
+    <view class='article-content'>
+      <!-- <text>{{infoContent}}</text> -->
+      <template is="wxParse" data="{{wxParseData:infoContentStr.nodes}}" />
+    </view>
+    <view class='article-content cflex'>
+      <image 
+        class='article-img' 
+        bindtap="previewImage" 
+        mode="aspectFill"
+        wx:for="{{imgList}}" 
+        data-src="{{item.imgPath}}" 
+        src="{{item.imgPath}}"
+      >
+      </image>
+    </view>
+  </view>
+</view>
+<!--文章评论  -->
+<view class='article-foot'>
+  <view class='article-foot-tit'>全部评论 ({{replyList.length}})</view>
+  <view class='article-foot-content'>
+
+    <view class='comment-box' wx:for="{{replyList}}">
+      <view class='comment-user clearfix'>
+        <image class='comment-user-head' src="{{item.mbImg}}"></image>
+        <text class='comment-user-nickname'>{{item.mbName}}</text>
+        <text class='comment-time'>{{item.replyDate}}</text>
+      </view>
+      <view class='comment-cont'>
+        <text class='comment-word'>{{item.replyContentStr}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 评论框 -->
+<view wx:if="{{showModal}}" class="shadow" bindtap='hideModal'>
+</view>
+  <view class='pl-box' wx:if="{{showModal}}">
+    <input class='pl-input' focus="{{focus}}" bindinput='saveInput' bindconfirm='saveReplySimple'></input>
+    <text class='pl-btn' bindtap='saveReplySimple'>发送</text>
+  </view>
+
+
+<!--底部按钮  -->
+<view class='art-handle-bg'></view>
+<view class='art-handle-box'>
+  <view class='zan-box' bindtap='saveLike'>
+    <image class='zan-icon' src="{{like?'/images/citywide/zan-act.png':'/images/citywide/zan-dft.png'}}"></image>
+    <text class='zan-num'>{{likeNum}}</text>
+  </view>
+  <view class='pinglun-box' bindtap='showModal'>
+    <image class='pinglun-icon' src="/images/citywide/msg-01.png"></image>
+    <text class='pinglun-txt'>评论</text>
+  </view>
+  <view class='call-box' bindtap='callAuthor' data-infophone="{{infoPhone}}">
+    <image class='call-icon' src="/images/citywide/call.png"></image>
+    <text class='call-txt'>联系TA</text>
+  </view>
+</view> 

@@ -1,0 +1,10 @@
+<template name="goods">
+ <view class="goods clearfix" bindtap="toDateil" data-goodsId="{{goodsId}}">
+  <image class="img" src="{{goodsImg}}"></image>
+  <view class="goods-contnt">
+    <text class='good-name'>{{goodsName}}</text>
+    <text class="sales">销量：{{saleNums}}</text>
+    <text class="price">¥ {{goodsPrice}}</text>
+  </view>
+ </view>
+</template>

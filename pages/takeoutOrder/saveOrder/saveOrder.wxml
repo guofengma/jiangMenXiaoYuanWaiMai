@@ -1,0 +1,71 @@
+<import src="../../mall/common/order-detail/index" />
+
+<view class="order_address_bg" >
+  <template is="order-detail" data="{{userName,userAddr,telNumber}}"></template>
+</view>
+
+
+<block wx:for="{{cartData}}" wx:for-item='item'>
+  <view class="goods_bg top_bg">
+    <image src="{{item.productDetail.foodImg}}" class="save-img"></image>
+    <view class="goods-pri">
+      <text class="goods-name">{{item.productDetail.foodName}}</text>
+      <view class='goods-num'>×{{item.num}}</view>
+      <view class="pri_bg">
+        ¥：<text class="price">{{item.productDetail.foodPrice}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<view class="goods_agrument">
+  <view class="nums btop">
+    <text>购买数量</text>
+    <text>×{{orderInfo.totNmu}}</text>
+  </view>
+
+  <view class="nums">
+    <text>运费</text>
+    <text class="freght-price"> ¥：{{orderInfo.deliveryFee}}</text>
+  </view>
+
+ 
+  <view class="nums" style='display:none;'>
+    <text>优惠劵</text>
+     <view class="sel_coupon" wx:if="{{array.length==0}}" bindtap="onCouponTab">
+        <input class="coupon_txt" disabled="false" value="{{couponTxt}}" placeholder="选择优惠劵" />
+        <image src="/images/shop/right.png" class="coupon_img"></image>
+      </view>
+      <view  wx:else>
+    <picker mode="selector" class="composite" 
+    bindchange="toComposite" value="{{index}}" range="{{array}}">
+      <view class="sel_coupon">
+        <input class="coupon_txt" disabled="false" value="{{couponTxt}}" placeholder="选择优惠劵" />
+        <image src="/images/shop/right.png" class="coupon_img"></image>
+      </view>
+    </picker>
+    </view>
+  </view> 
+
+  <view class="user_say_bg">
+    <text>买家留言</text>
+    <input class="user_say" type="text" maxlength="25" placeholder="选填：对本次交易的说明" 
+    placeholder-class="pla_user_say" bindinput="leaveMsg"></input>
+  </view>
+  <view class="user_say_bg" style='display:none;'>
+    <text>用餐人数</text>
+    <input class="user_say" type="number" maxlength="25" placeholder="便于商家带够餐具" bindinput='usePersonNum'
+    placeholder-class="pla_user_say"></input>
+  </view>
+
+</view>
+
+<view class="cart_footer_bg">
+  <text>合计：</text>
+  <text class="all_color">¥{{ orderInfo.deliveryFee*1 + orderInfo.totPrice*1 }}</text>
+
+  <view class="all_sub_txt" bindtap="saveOrder">
+    <text>立即购买</text>
+
+  </view>
+</view>

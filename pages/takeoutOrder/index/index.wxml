@@ -1,0 +1,83 @@
+<import src="/pages/template/tabbar/tabbar.wxml" />
+<view class='index'>
+  <!-- 定位、搜索 -->
+  <view class='top clearfix'>
+    <view class='location-box fl' bindtap='getAddr'>
+      <image src="/images/shop/location.png" class='location-icon'></image>
+      <text class='location-name'>{{location}}</text>
+      <image src="/images/shop/icon_right_arrow.png" class='location-arrow'></image>
+    </view>
+    <view class='search-box'>
+      <icon type="search" size="16" class='search-icon' />
+      <input type='search' class='search' placeholder='搜索' bindconfirm="bindSearch" bindinput='searchNot'></input>
+    </view>
+  </view>
+  <!--轮播图-->
+  <swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true" indicator-color="#FFF" indicator-active-color="#6DB5BF">
+    <block wx:for="{{slideImgs}}" wx:key="s">
+      <swiper-item data-link="{{item.slideLink}}" bindtap="toLink">
+        <image src="{{item.imgUrl}}" class="slide-image" mode='aspectFit' style="height:300rpx"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--分类  -->
+  <view class="sel_bg">
+    <block wx:for="{{recCla}}" wx:for-item="item" wx:key="item">
+      <view class="img_bg" bindtap="toFoodListTab" data-claId="{{item.seqId}}">
+        <image class="claImage" src="{{item.typeImg}}" mode="aspectFill"></image>
+        <view class="tit">
+          <text>{{item.typeName}}</text>
+        </view>
+      </view>
+    </block>
+    <view class="img_bg" bindtap="toFoodListTab" data-claId="">
+        <image class="claImage" src="/images/all-01.png" mode="aspectFill"></image>
+        <view class="tit">
+          <text>全部</text>
+        </view>
+      </view>
+  </view>
+  <!--推荐商家  -->
+  <view class='recShop'>
+    <view class='leftLine'></view>
+    <view class='recText'>推荐商家</view>
+    <view class='rightLine'></view>
+  </view>
+
+  <!--商家列表  -->
+  <view class="navbar"> 
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <view class='shopItems'>
+    <block wx:for="{{newStoreList}}" wx:for-item="item" wx:key="item">
+      <view class='itemDetail' data-storeid="{{item.seqId}}" bindtap='toStoreDetail'>
+        <view class='leftImg'>
+          <image src="{{item.storeImg}}" class="shopImg" mode='aspectFit'></image>
+        </view>
+        <view class='centerText'>
+          <view class='shopName'>{{item.storeName}}
+
+          </view>
+          <view class='saleView'>
+            <view class='starView'>
+              <image wx:for="{{stars}}" wx:for-item="itm" class='comment-star' src="{{index < (item.storeScore || 5) ?goodStar:defaultStar }}"></image>
+            </view>
+            <view class='saleNum'>月销: {{item.saleNum}}
+            </view>
+            
+          </view>
+          <view class='type'>{{item.typeName}}  {{item.storeAddr}}
+          </view>
+          <view class='detail'>起送 ¥ {{item.startFee}} | 配送 ¥ {{item.deliveryFee}} | 人均 ¥ {{item.everyFee}}
+          </view>
+        </view>
+        <view class='rightDistance'>
+          <text class='distance'>{{item.distance}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+</view>
+<template is="tabbar" data="{{tabbar}}"></template>

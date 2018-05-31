@@ -1,0 +1,110 @@
+<import src="/pages/template/tabbar/tabbar.wxml" />
+<!-- 定位、搜索 -->
+<view class='top clearfix'>
+  <view class='location-box fl' bindtap='getAddr'>
+    <image src="/images/shop/location.png" class='location-icon'></image>
+    <text class='location-name'>{{location}}</text>
+    <image src="/images/shop/icon_right_arrow.png" class='location-arrow'></image>
+  </view>
+
+  <view class='search-box'>
+    <icon type="search" size="16" value="" class='search-icon' />
+    <input type='search' class='search' placeholder='搜索' bindconfirm="bindSearch" bindinput='searchNot'></input>
+  </view>
+  
+</view>
+<!--轮播图-->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true" indicator-color="#FFF" indicator-active-color="#6DB5BF">
+  <block wx:for="{{slideImgs}}" wx:key="item">
+    <swiper-item class="swiper" data-link="{{item.slideLink}}" bindtap="toLink">
+      <image src="{{item.imgUrl}}" class="swiper"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--推荐分类-->
+<view class="sel_bg">
+  <!-- <view class="img_bg" bindtap="Coupon" data-index="{{index}}">
+    <image class="image" src="/image/youhuiquan.png" mode="aspectFit"></image>
+    <view class="tit">
+      <text>优惠券</text>
+    </view>
+  </view> -->
+  <block wx:for="{{recCla}}" wx:for-item="item" wx:key="item">
+    <view class="img_bg" bindtap="recGoodsTab" data-claId="{{item.claId}}">
+      <image class="image" src="{{item.claImg}}" mode="aspectFit"></image>
+      <view class="tit">
+        <text>{{item.claName}}</text>
+      </view>
+    </view>
+  </block>
+  <view class="img_bg" bindtap="recGoodsTab" data-claId="">
+      <image class="image" src="/images/all-01.png" mode="aspectFit"></image>
+      <view class="tit">
+        <text>全部</text>
+      </view>
+    </view>
+</view>
+<!--广告  -->
+<!-- <view class="image_bg">
+  <image src="{{advImg}}" class="avi_image">></image>
+</view> -->
+
+<!-- <view class="rec-goods none">
+  <text class="rec-left"></text>
+  <text class="rec-txt">推荐商品</text>
+  <text class="rec-left"></text>
+</view> -->
+
+<!--推荐商品-->
+<!-- <view class="newest-box" >
+  <block wx:for="{{recGoodsList}}">
+    <view class="newest-list" bindtap="toDetailTab" data-goodsId="{{item.goodsId}}">
+      <image src="{{item.goodsImg}}" mode="scaleToFill"></image>
+       <view class="name-price">
+       <text class="goods_txt" >{{item.goodsName}}</text>
+       <text> <text class="price">¥{{item.goodsPrice}}</text> <text class="fr">销量：{{item.goodsSaleNum}}</text></text>
+        
+       </view>  
+    </view>
+  </block>
+</view> -->
+
+<!--推荐商品  -->
+<view class="recommend-title tc">
+  <text class="rec-txt">推荐商品</text>
+</view>
+<view class="newest-box">
+  <view class="newest-list clearfix" wx:for="{{recGoodsList}}" wx:key="item" data-goodsId="{{item.goodsId}}" bindtap="toDetailTab">
+    <image src="{{item.goodsImg}}" class='fl'></image>
+    <view class='pro-info'>
+      <view class="tit">
+        <text>{{item.goodsName}}</text>
+      </view>
+      <view class='sales-box'> 
+         <text class="sales">销量: {{item.goodsSaleNum}}</text>
+      </view>
+      <view>      
+        <text class="price">￥{{item.goodsPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!--
+<view class="btn-container">
+  <view bindtap="toCall">
+    <view class="btn-contrast">咨询</view>
+    <image src="/image/xiaoxi.png" style="position: absolute;height: 40rpx;width: 40rpx;bottom: 70rpx;right: 30rpx;"></image>
+  </view>
+</view>-->
+
+<!-- <view class="provier-data">
+
+  <view class="">
+    <text>广州赤焰信息@技术支持</text>
+  </view>
+  <view class=""></view>
+</view> -->
+<template is="tabbar" data="{{tabbar}}"></template>

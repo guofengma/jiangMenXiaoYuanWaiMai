@@ -1,0 +1,20 @@
+@import "../takeoutOrder/storeDetail/storeDetail.wxss";
+.title-box{
+	font-size: 28rpx;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 90rpx;
+	background: #fff;
+}
+.title{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.comment-star{
+	width: 24rpx;
+	height: 24rpx;
+	margin-right: 12rpx;
+}

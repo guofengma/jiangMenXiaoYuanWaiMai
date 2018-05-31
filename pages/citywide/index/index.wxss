@@ -1,0 +1,17 @@
+swiper-item{
+  width: 100%;
+}
+.slide-image{
+  width: 100%;
+}
+swiper{
+  height: 400rpx;
+  margin-bottom: 30rpx;
+}
+.img-box{
+  padding: 0 20rpx;
+}
+.item-img{
+  width: 100%;
+  margin-bottom: 20rpx;
+}

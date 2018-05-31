@@ -1,0 +1,14 @@
+<import src="../../common/activity/goods"/>
+
+<view wx:if="{{discountGoodsList.length!=0}}">
+
+<view class="newest-box" >
+<block wx:for="{{discountGoodsList}}" wx:for-item="item">
+ <view class="newest-list" bindtap="toDetailTab" data-goodsId="{{item.goodsId}}" >
+    <template is="goods" data="{{...item}}"></template>
+</view>
+</block>
+</view>
+</view>
+
+<view  wx:else class="no_data">暂无数据</view>

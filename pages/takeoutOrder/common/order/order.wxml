@@ -1,0 +1,28 @@
+<template name="order">
+  <view class="delivery-title">{{title}}</view>
+  <view class='delivery-list-box'>
+
+    <view class='delivery-item' wx:for="{{orderList}}">
+      <text class='delivery-time'>{{item.orderDate}}</text>
+      <text class='delivery-store'>{{item.storeName}}</text>
+      <text class='delivery-price'>￥{{item.orderMoney}}</text>
+    </view>
+    <view class='noData' wx:if="{{!orderList.length}}">暂无数据</view>
+    <!-- <view class='delivery-item'>
+      <text class='delivery-time'>2017-12-25 12:25:23</text>
+      <text class='delivery-store'>肯德基(东圃店)</text>
+      <text class='delivery-price'>￥45</text>
+    </view>
+    <view class='delivery-item'>
+      <text class='delivery-time'>2017-12-25 12:25:23</text>
+      <text class='delivery-store'>肯德基(东圃店)</text>
+      <text class='delivery-price'>￥45</text>
+    </view>
+    <view class='delivery-item'>
+      <text class='delivery-time'>2017-12-25 12:25:23</text>
+      <text class='delivery-store'>肯德基(东圃店)</text>
+      <text class='delivery-price'>￥45</text>
+    </view> -->
+
+  </view>
+</template>

@@ -1,0 +1,126 @@
+<template name="my">  
+  <!-- 用户头像信息 -->
+  <view class="header-container">
+    <image class="user-image"></image>
+    <view class="user-info">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <text class="user-name">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='list-box'>
+    <view class="user-list" bindtap="toMallOrder">
+    <image src="/images/shop/mallOrder.png" class='user-liat-icon'></image>
+      <text>商城订单</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+    <view class="user-list" bindtap='toMyIssue'>
+      <image src="/images/shop/wdfb.png" class='user-liat-icon'></image>
+      <text>我的发布</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+    <view class="user-list" style="display: none;">
+    <image src="/images/shop/fw.png" class='user-liat-icon'></image>
+      <text>我的评价</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+    <view class="user-list" bindtap='toMyStore'>
+      <image src="/images/shop/wddp.png" class='user-liat-icon'></image>
+      <text>我的店铺</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='list-box'>
+
+    <view class="user-list" bindtap='toDeliveryman'>
+      <image src="/images/shop/psy.png" class='user-liat-icon'></image>
+      <text>配送员</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+
+    <view class="user-list" bindtap='toApplyEntry'>
+      <image src="/images/shop/sqrz.png" class='user-liat-icon'></image>
+      <text>申请入驻</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='list-box'>
+    <view class="user-list" bindtap='yhqzx'>
+      <image src="/images/yhqzx.png" class='user-liat-icon'></image>
+      <text>优惠券中心</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+    <view class="user-list" bindtap='wdyhq'>
+      <image src="/images/yhq.png" class='user-liat-icon'></image>
+      <text>我的优惠券</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='list-box'>
+    <view class="user-list" bindtap='selAddressa'>
+      <image src="/images/shop/dz.png" class='user-liat-icon'></image>
+      <text>收货地址</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+    <!-- <view class="user-list" bindtap='selAddressa' style="display: none;">
+    <image src="/images/yhqzx.png" class='user-liat-icon'></image>
+      <text>优惠券中心</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view> -->
+    <!-- <view class="user-list" bindtap='selAddressb' style='display: none;'>
+    <image src="/images/yhq.png" class='user-liat-icon'></image>
+      <text>我的优惠券</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view> -->
+    <view class="user-list contact-box">
+      <image src="/images/shop/kf.png" class='user-liat-icon'></image>
+      <text>联系我们</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+      <button class='contact-btn' open-type="contact"></button>
+    </view>
+    <view class="user-list" bindtap='toAbout'>
+      <image src="/images/shop/about.png" class='user-liat-icon'></image>
+      <text>关于</text>
+      <view class="all-order">
+        <image src="/images/shop/right.png"></image>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="provier-data">
+
+    <view class="">
+      <text>江门市天蝎软件开发有限公司</text>
+    </view>
+    <view class=""></view>
+  </view>
+</template>

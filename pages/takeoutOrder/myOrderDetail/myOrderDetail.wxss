@@ -1,0 +1,121 @@
+@import "../../mall/common/order-detail/index.wxss";
+@import "../../mall/common/detail/detail.wxss";
+
+page {
+  background-color: #f0f0f0;
+  font-size: 28rpx;
+}
+
+/*订单详情  */
+.order{
+  background-color: white;
+
+}
+.order .order-header{
+  display: flex;
+  padding: 0 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+}
+
+.order-state{
+  font-size: 24rpx;
+}
+
+.order-list{
+  width: 690rpx;
+  height: 160rpx;
+   margin: 0 auto; 
+  padding-left: 30rpx;
+  
+   display: flex; 
+   align-items: center; 
+  /* margin-top: 26rpx; */
+  background-color: #f8f8f8;
+  margin-top: 10rpx;
+}
+.order-content{
+  display: flex;
+  
+}
+.order-content image{
+  height: 125rpx;
+  width: 125rpx;
+}
+
+.order-content .order-con-right{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 505rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  
+}
+
+.order-right-num{
+  font-size: 30rpx;
+  
+}
+.order-right-num text{
+margin-left: 20rpx;
+display: inline-block;
+padding-top: 10rpx;
+
+}
+/*餐盒费  */
+.cost1{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  background-color: white;
+  height: 88rpx;
+  align-items: center;
+}
+/*配送费  */
+.cost2{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  height: 88rpx;
+  align-items: center;
+  background-color: white;
+  
+}
+/*合计  */
+.cost3{
+  display: flex;
+  justify-content: space-between;
+  width: 630rpx;
+  padding: 0 30rpx;
+   margin: 0 auto;
+  font-size: 30rpx;
+  height: 88rpx;
+  align-items: center;
+  background-color: white;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+/*按钮  */
+.but-box{
+  /* height: 98rpx; */
+  margin-top: 45rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+}
+.but-box .but{
+  width: 695rpx;
+  margin: 0 auto;
+  background-color: #09bb07;
+  height: 80rpx;
+  color: white;
+}
+
+.order_address_bg{
+  margin-bottom: 20rpx;
+}

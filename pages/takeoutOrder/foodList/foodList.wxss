@@ -1,0 +1,97 @@
+  page {
+  background-color: #f8f8f8;
+} 
+.foodList{
+  margin-bottom: 50rpx;
+} 
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+ font-size: 28rpx;
+font-weight: bold;
+ color: #6e6e6e;
+border-bottom: 1rpx solid #cfcece;  
+height: 88rpx;
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 88rpx; 
+} 
+.navbar .item.active{ 
+ color:#e22319; 
+} 
+
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height:4rpx; 
+ background: #e22319; 
+} 
+.shopItems {
+  width: 100%;
+  background-color: white;
+  margin-top: 30rpx;
+  
+}
+.itemDetail{
+  margin-left: 20rpx;
+  width: 710rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  flex-direction: row;
+}
+.leftImg{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+}
+.shopImg{
+  width: 200rpx;
+  height: 150rpx;
+}
+.rightDistance{
+  /* margin-right: 30rpx; */
+  display: flex;
+  align-items: center;
+}
+.centerText {
+  /* flex: 1; */
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 500rpx;
+  overflow: hidden;
+}
+.shopName{
+  font-size: 28rpx;
+  color: #1a1a1a;
+  line-height: 100%;
+  /* font-weight: bold; */
+}
+.type,.saleView,.detail,.distance{
+  color: #626262;
+  font-size: 20rpx;
+  line-height: 100%;
+}
+.saleView{
+  margin-top: 22rpx;
+}
+.type{
+  margin-top: 20rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.detail{
+  margin-top: 18rpx;
+}

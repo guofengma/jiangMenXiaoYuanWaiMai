@@ -1,0 +1,67 @@
+<!--<view class="logo">
+  <image src="/image/logo.jpg"></image>
+</view>-->
+
+<view class="about">
+  <view class="light-name">
+    <text>天桥视力康复中心</text>
+  </view>
+  
+  <view class="input">
+    济南天桥视力康复中心，致力于视力恢复十多年，针对青少年近视弱视远视散光问题，及中老年视力白内障青光眼黄斑病糖网病等健康问题，运用中医五轮理论独创五位一体全息方法，帮助大家重新获得健康视力
+  </view><!-- 
+  <view class="input">
+    自2007年成立东莞市铭展钢模五金厂以来，为珠三角众多客户提供了近万套优质的塑胶模具，锌合金、铝合金模具，2011年配合一些优质客商的需求，购置了一批进口注塑机和自动化设备，提高了公司的配套服务水平。2013年公司购置机台、完善自动化装备和成品线，可以满足客商从产品设计研发、模具设计、注塑成型，喷油丝印和成品装配一体化生产的需求。2016年4月份注册MKS（迈科森）作为相关产品的注册商标，可为全球用户提供各类电子产品的塑胶、锌合金、铝合金模具和注塑成型及压铸成型。现配备有工年长达１５年之久的专业产品和模具设计工程师５名，我们坚信；专业＋专注的团队精神，通过不断的学习和实践，一定可以锻造出一个具备核心竞争力的一流企业！
+  </view>
+  <view class="input">
+    现阶段公司实现了为全球用户提供：影院和家庭电视配套的3Ｄ眼镜，并投入资金正在研发ＶＲ穿戴设备，坚持以“创新引领3D生活”为核心理念，专注于3D虚拟视觉显示技术的研发，依靠创新构造企业的核心竞争力，不断为3D用户提供满意的3D产品。公司秉承“优质产品，合理定价，用心服务，锐意进取”为经营理念，坚持“品质第一”的质量方针，不断的提升自身的技术水平和管理水平，追求更先进的性能，从而为客户创造超值的性价比，超值的财富。公司秉承：“尊重、坦诚、贡献、慎思、明辨、责任 、感恩、精进”的企业价值观，高度重视3D技术的研发
+    ，促进用户生活品质的发展。凭借对技术的持续改进和提高之优势建立高效的海外商业运营模式，满足全球广大用户的需求。“创新发展，服务全球”的战略理念，以“诚信为本，互利共赢和无疆界合作”的企业态度，整合全球资源，通过商业模式、技术、产品、服务、管理、文化等创新使铭镜不断完善，不断进步成为3D领域的领导者！
+  </view>
+  <view class="input">
+    热忱欢迎全球客商来公司洽谈业务和指导工作！
+  </view> -->
+</view>
+
+<!-- <view class="logo">
+  <image src="imgs/01.jpg"></image>
+</view>
+<view class="logo">
+  <image src="imgs/02.jpg"></image>
+</view>
+<view class="logo">
+  <image src="imgs/03.jpg"></image>
+</view>
+<view class="logo">
+  <image src="imgs/04.jpg"></image>
+</view>-->
+
+<view class="call-man">
+  <text>联 系 人：</text>
+  <text>李经理</text>
+</view>
+<view class="call-man" bindtap='toCall'>
+  <text>移动电话：</text>
+  <text>15169137521</text>
+</view>
+<view class="call-man">
+  <text>咨询售后热线：</text>
+  <text>0531-85927521</text>
+</view>
+
+<!-- 
+<view class="call-man">
+  <text>网址：</text>
+  <text>www.mks-gd.com</text>
+</view> 
+<view class="call-man">
+<text>公司主页：</text>
+<text>http://ymds88.1688.com</text>
+</view> -->
+
+<view class="provier-data">
+
+  <view class="">
+    <text>广州赤焰信息@技术支持</text>
+  </view>
+  <view class=""></view>
+</view>

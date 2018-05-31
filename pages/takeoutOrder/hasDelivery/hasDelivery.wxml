@@ -1,0 +1,4 @@
+<import src="../common/order/order.wxml" />
+
+<template is="order" data="{{orderList,title}}"></template>
+

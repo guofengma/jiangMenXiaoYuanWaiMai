@@ -1,0 +1,104 @@
+page{
+	background: #f1f1f1;
+	font-size: 28rpx;
+}
+.order-title{
+	height: 98rpx;
+	line-height: 98rpx;
+	padding:0 30rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  display: flex;
+  justify-content:space-between;
+}
+.entryDate{
+  display: flex;
+  flex-direction: grow;
+  align-items: center;
+}
+.entryDate input{
+  width: 150rpx;
+}
+.order-item-title{
+	height: 100rpx;
+	background: #fff;
+	border-bottom: 1px solid #f1f1f1;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	padding: 0 30rpx;
+	align-items: center;
+  margin-bottom: 20rpx;
+}
+.order-item{
+	height: 100rpx;
+	background: #fff;
+	border-bottom: 1px solid #f1f1f1;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	padding: 0 30rpx;
+	align-items: center;
+}
+.order-user-info{
+  display: flex;
+	display: -webkit-flex;
+  align-items: center;
+}
+.order-user-head{
+	width: 58rpx;
+	height: 58rpx;
+	margin-right: 15rpx;
+}
+.order-user-name{
+	width: 400rpx;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+  display: inline-block;
+}
+.order-price{
+	color: #e01106;
+}
+.order_count-total_sum{
+  display: flex;
+  flex-direction: grow;
+}
+.order-total{
+  margin-right: 60rpx;
+}
+.unit, .order,.time-date{
+font-size: 22rpx;
+color: #666666;
+}
+.data-order{
+font-size:28rpx;
+color: #333333;
+}
+.data-unit{
+font-size:28rpx;
+color: #e82576;
+} 
+.time-pitch{
+  margin-right:10rpx; 
+}
+.entryDate{
+  color: #666666;
+}
+.leftLine {
+  width: 60rpx;
+  border-bottom: 3rpx solid #2f2f2f;
+  margin-right: 8rpx;
+}
+.inputfield{
+  width: 172rpx;
+}
+
+.tenlog{
+  height: 100rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}

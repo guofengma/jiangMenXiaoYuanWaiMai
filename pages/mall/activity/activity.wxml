@@ -1,0 +1,6 @@
+<view class="act-img">
+<block wx:for="{{discountActivityList}}" >
+<image src="{{item.activityImg}}" class="img" bindtap="onActivityTab"
+ data-index="{{index}}" data-seqid="{{item.seqId}}"></image>
+</block>
+</view>

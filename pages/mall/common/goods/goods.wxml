@@ -1,0 +1,15 @@
+<!--商品  -->
+<template name="goods">
+<view bindtap="toDateil" data-goodsId="{{goodsId}}">
+<image class="goods_img"  src="{{goodsImg}}" mode="scaleToFill"></image>
+<view class="goods_about goods_txt" >{{goodsName}}</view>
+</view>
+
+<view class="goods_pri">
+<text class="pri">¥{{goodsPrice}}</text>
+<view bindtap="addCart" data-goodsId="{{goodsId}}">
+<image class="cart" src="/image/goods_cart.png"></image>
+</view>
+</view>
+
+</template>

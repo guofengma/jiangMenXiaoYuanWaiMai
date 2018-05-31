@@ -1,0 +1,11 @@
+<!-- // 引入模板 -->
+<import src="/pages/wxParse/wxParse.wxml"/>
+
+<view class="about-box">
+  <!-- {{aboutContent}} -->
+  <!-- {{infoContent}} -->
+
+  <!-- //这里data中article为bindName -->
+  <template is="wxParse" data="{{wxParseData:infoContent.nodes}}"/>
+  
+</view>

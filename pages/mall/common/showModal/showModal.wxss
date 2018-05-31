@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  border-radius: 15rpx;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25rpx 0;
+}
+
+.modal-tip {
+  padding: 25rpx;
+}
+
+.modal-text {
+  padding: 25rpx;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-btn button {
+  background-color: #1296db;
+  margin: 25rpx;
+  flex: 1;
+  width: 100%;
+  color: #fff;
+}
+
+.modal-btn button:nth-of-type(1) {
+  background-color: #c1c1c1;
+  margin: 25rpx;
+  flex: 1;
+  width: 100%;
+}
+
+.modal-btn button:after {
+  content: '';
+  border: 0;
+}
+
+.modal-layer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.2;
+  z-index: 99;
+}
+
+.modal-cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#ccc;
+  margin: 25rpx;
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 36rpx;
+  border-radius: 10rpx;
+  color: #fff;
+}
+.modal-sure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1296db;
+  margin: 25rpx;
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 36rpx;
+  border-radius: 10rpx;
+  color: #fff;
+}

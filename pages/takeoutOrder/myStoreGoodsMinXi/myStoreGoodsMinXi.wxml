@@ -1,0 +1,10 @@
+
+<view class="line-box top">
+  <view class='line-name'>菜品</view>
+  <view class='xl'>销量</view>
+</view>
+<view class="line-box" wx:for="{{list}}" wx:key="l">
+  <view class='line-name'>{{item.goods_name}}</view>
+  <view class='xl'>{{item.goodsNum}}</view>
+</view>
+<view class='noData' wx:if="{{list.length == 0}}">暂无数据</view>

@@ -1,0 +1,11 @@
+<view class="comment-box">
+  <textarea maxlength='200' bindinput='saveComment' placeholder='请输入评价内容，限200字' class='comment'>
+  </textarea>
+  <view class='comment-star-box'>
+    <text class='star-txt'>评分</text>
+    <view class='star-box'>
+      <image class='star' bindtap='selectStar' data-key="{{item+1}}" wx:for="{{stars}}" wx:key="s" src="{{index < key ?( (key - index) < 1 ? halfStar:goodStar):defaultStar }}" mode="widthFix"></image>
+    </view>
+  </view>
+  <button class='btn' bindtap='ordercomment'>提交</button>
+</view>

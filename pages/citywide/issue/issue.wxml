@@ -1,0 +1,42 @@
+	<import src="/pages/template/tabbar/tabbar.wxml" />
+<!-- 发布 -->
+<!--选择分类  -->
+<view class="section clearfix">
+  <image class='section-icon fr' src="/images/public/right.png"></image>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{bbsCates}}" range-key="typeName">
+    <view class="picker">
+      当前选择：{{bbsCates[index].typeName}}
+    </view>
+  </picker>
+</view>
+<!-- 发布框 -->
+<view class='issue-box'>
+  <textarea maxlength="-1" bindinput="saveMsg" class='words-box' placeholder='请输入要发布的内容'>
+  </textarea>
+  <!--图片选择 展示  -->
+  <view class='upload-box'>
+    <view class='upload-item' wx:for="{{tempFilePaths}}">
+      <image class='up-img' src="{{item}}"></image>
+      <image class='up-dlete' bindtap='deleteImg' data-idx="{{index}}" mode='widthFix' src="/images/citywide/close.png"></image>
+    </view>
+    <view class='upload-item' wx:if="{{tempFilePaths.length < 4}}">
+      <image class='up-add' bindtap='chooseImage' src="/images/citywide/add.png"></image>
+    </view>
+  </view>
+</view>
+<!--地址选择  -->
+<view class='issue-addr-box line-box' bindtap='getAddr'>
+  <image class='issue-addr-icon line-icon' src="/images/citywide/location.png"></image>
+  <text class='issue-addr line-cont'>{{location}}</text>
+  <image class='right-arrow fr' src="/images/public/right.png"></image>
+</view>
+<!--手机号码  -->
+<view class='issue-phoner-box line-box'>
+  <image class='issue-phone-icon line-icon' src="/images/citywide/call-gray.png"></image>
+  <input type='number' bindinput='savePhone' class='issue-phone line-cont' placeholder='请输入您的电话号码'></input>
+  <image class='right-arrow fr' src="/images/public/right.png"></image>
+</view>
+<!--发布按钮  -->
+<button class='issue-btn' bindtap='issue'>立即发布</button>
+
+<template is="tabbar" data="{{tabbar}}"></template>

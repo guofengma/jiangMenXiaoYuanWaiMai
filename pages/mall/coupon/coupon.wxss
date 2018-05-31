@@ -1,0 +1,9 @@
+/* pages/coupon/coupon.wxss */
+.cupon{
+   margin: 30rpx;
+}
+.coupon_img{
+  height: 160rpx;
+  width: 100%;
+   margin-bottom:20rpx;
+}

@@ -1,0 +1,34 @@
+ <!-- 评价 -->
+  <view class='evaluate'>
+    <view class='title-box'>
+      <text class="title {{index == currTab ? 'active':''}}" wx:for="{{title}}">{{item}}</text>
+    </view>
+    <view class='comment'>
+        <view class='commentItem' wx:for="{{commentList}}" >
+          <view class='userInfo'>
+            <view class='userImg'>
+              <image src='{{item.mbImg}}' mode='aspectFit'></image>
+            </view>
+            <view class='userView'>
+              <view class='nameView'>
+                <view class='commentTime'>{{item.commentTimeFmt}}</view>
+                <view class='userName'>{{item.mbName}}
+                </view>
+
+              </view>
+
+              <view class='scoreStar'>
+                <image wx:for="{{stars}}" wx:for-item="itm" class='comment-star' src="{{index < item.commentScore ?goodStar:defaultStar }}"></image>
+              </view>
+            </view>
+
+          </view>
+          <view class='commentDetail'>
+            <view class='commentText'>{{item.commentContent}}</view>
+          </view>
+        </view>
+
+
+    </view>
+
+  </view>

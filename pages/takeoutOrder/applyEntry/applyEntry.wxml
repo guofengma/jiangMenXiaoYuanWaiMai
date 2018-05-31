@@ -1,0 +1,54 @@
+<view class="apply-top">
+  <image class='apply-bg' src="/images/takeout/apply-bg.png"></image>
+  <text>填写信息</text>
+  <text>免费申请入驻小程序</text>
+</view>
+<view class='apply-cont'>
+
+  <view class='apply-box' wx:if="{{!storeBusiImg}}" bindtap='chooseStoreBusiImg'>
+    <image class='apply-img' mode="widthFix" src="/images/takeout/upload.png"></image>
+    <text>上传营业执照</text>
+  </view>
+  <view class='view-box' wx:if="{{storeBusiImg}}" bindtap='chooseStoreBusiImg'>
+    <image class='businessLicense' src="{{storeBusiImg}}"></image>
+  </view>
+
+  <view class='line-box apply-store'>
+    <input class='apply-item-input' data-str="storeName" bindinput='saveInput' placeholder='请输入（店铺、公司）名称'></input>
+  </view>
+  <view class='line-box apply-phone'>
+    <input class='apply-item-input' data-str="storeLinker" bindinput='saveInput' placeholder='请输入联系人姓名'></input>
+  </view>
+  <view class='line-box'>
+    <text class='name'>手机号</text>
+    <input class='apply-item-input' type='number' data-str="storePhone" bindinput='saveInput' placeholder='请输入手机号'></input>
+  </view>
+  <view class='line-box'>
+    <text class='name'>密码</text>
+    <input class='apply-item-input' type='password' data-str="userPwd" bindinput='saveInput' placeholder='请输入密码(字母、数字)'></input>
+  </view>
+  <view class='none'>
+    <text class='name'>地址选择</text>
+    <input class='apply-ckeck' placeholder='请选择地址' disabled='true'></input>
+    <image class='right' mode="widthFix" src="/images/public/right.png"></image>
+  </view>
+  <view class='line-box'>
+    <text class='name'>详细地址</text>
+    <input class='apply-item-input' data-str="storeAddr" bindinput='saveInput' placeholder='请输入详细地址'></input>
+  </view>
+    <view class='line-box'>
+    <text class='name'>所属区</text>
+    <input class='apply-item-input' data-str="storeDistr" bindinput='saveInput' placeholder='请输入所属区'></input>
+  </view>
+</view>
+
+<!--门店logo  -->
+<view class='apply-logo-box'>
+  <view class='logo-tit'>门店logo</view>
+    <image class='add-icon' wx:if="{{!storeImg}}" bindtap='chooseStoreImg' src="/images/citywide/add.png"></image>
+  <view class='logo-box' wx:if="{{storeImg}}" bindtap='chooseStoreImg'>
+    <image class='store-logo' src="{{storeImg}}"></image>
+  </view>
+</view>
+
+<view class='btn' bindtap='applyStore'>马上入驻</view>

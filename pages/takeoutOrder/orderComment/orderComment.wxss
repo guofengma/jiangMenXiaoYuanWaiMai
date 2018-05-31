@@ -1,0 +1,39 @@
+page{
+	background: #f1f1f1;
+	font-size: 28rpx;
+}
+.comment{
+	background: #fff;
+	width: calc(100% - 60rpx);
+	height: 390rpx;
+	margin:30rpx;
+	padding: 10rpx;
+	box-sizing: border-box;
+}
+.comment-star-box{
+	background: #fff;
+	padding: 0 30rpx; 
+	height: 70rpx;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.star-box{
+	display: inline-block;
+}
+.btn{
+	background: #e22319;
+	color: #fff;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	position: fixed;
+	bottom: 45rpx;
+	left: 30rpx;
+	right: 30rpx;
+}
+.star{
+	width: 40rpx;
+	margin-left: 10rpx;
+}

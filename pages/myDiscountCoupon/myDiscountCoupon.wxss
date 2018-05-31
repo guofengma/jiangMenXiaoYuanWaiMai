@@ -1,0 +1,24 @@
+/* pages/myDiscountCoupon/myDiscountCoupon.wxss */
+page{
+  width: 100%;
+  background: #f3f3f3;
+}
+.myDiscountCoupon{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.myDiscountCoupon .title{
+  color: #666;
+  width: 100%;
+  padding-left: 35rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.discountsBack{
+  margin-bottom: 20rpx;
+}
+.discountsBack .discountsFrame{
+  height: 180rpx;
+}

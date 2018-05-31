@@ -1,0 +1,55 @@
+<!-- <view class="mystore-top">
+  <image class='store-logo' mode="widthFix" src="{{storeImg}}"></image>
+  <text class='store-name'>{{storeName}}</text>
+</view>
+<view class='lines-box'>
+  <view class='sales-title'>
+    <image class='line-icon store-order' mode="widthFix" src="/images/takeout/销售@2x.png"></image>
+    <text class='store-option line-text'>店铺销售额</text>
+  </view>
+
+  <view class='sales'>
+  <view class='left-sum'>
+    <text>今日销售额</text>
+  </view>
+    <text class='sum'>{{daySale}}</text>
+    <text>元</text>
+  </view>
+  <view class='sales'>
+  <view class='left-sum'>
+    <text>本月销售额</text>
+  </view>
+    <text class='sum '>{{monthSale}}</text>
+    <text>元</text>
+  </view>
+</view>
+
+<view class='line-box' bindtap='toStoreSales'>
+<view class='line-style'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/结算@2x.png"></image>
+  <text class='store-option line-text'>店铺销售结算</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+</view>
+<view class='line-box' bindtap='toStoreOrder'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/订单(5)@2x.png"></image>
+  <text class='store-option line-text'>店铺销售明细</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+<view class='line-box interval' bindtap='toStoreComment'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/服务(1)@2x.png"></image>
+  <text class='store-option line-text'>店铺评价</text>
+  <image class='right-arrow' src="/images/public/right.png"></image>
+</view>
+<view class='line-box'>
+  <image class='line-icon store-order' mode="widthFix" src="/images/takeout/退出@2x.png"></image>
+  <text class='store-option line-text'>退出登录</text>
+</view> -->
+
+ <view class="sign-box">
+   <view class='sign-tit'>已有店铺，请登录</view> 
+  <input class='sign-input userPhone' type='number' data-str="mbPhone" bindinput='saveInput' value='' placeholder='请输入手机号码'></input>
+  <input class='sign-input userPwd' type='password' data-str="mbPwd" bindinput='saveInput' value='' placeholder='请输入密码'></input>
+  <button class='btn' bindtap='loginToStore'>登录</button>
+  <view class='link' bindtap='toApplyEntry'>暂无店铺，去申请></view>
+</view> 

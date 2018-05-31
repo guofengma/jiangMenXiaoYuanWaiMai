@@ -1,0 +1,100 @@
+page{
+	background: #f1f1f1;
+  font-size: 32rpx;
+}
+.dm-top{
+	height:200rpx;
+	background: #e82576;
+	text-align: center;
+	box-sizing: border-box;
+	padding:30rpx 60rpx;
+	color: #fff;
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 1rpx solid #f1f1f1;
+  margin-bottom: 10rpx;
+}
+.dm-head{
+	width: 125rpx;
+	height: 125rpx;
+	border-radius: 50%;
+}
+.dm-name{
+	font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.line-box{
+	height: 100rpx;
+	padding: 0 30rpx;
+	background: #fff;
+	font-size: 32rpx;
+	display: flex;
+	display: -webkit-flex; 
+	align-items: center;
+	justify-content:flex-start;
+}
+
+.line-text{
+	width: 630rpx;
+	display: inline-block;
+}
+.td-order{
+	border-bottom: 1px solid #f1f1f1;
+}
+.dm-user{
+  display: flex;
+  flex-direction: grow; 
+  align-items: center;
+}
+.sum{
+  color:#fff;
+  font-size: 24rpx;
+}
+.sum text{
+  font-size: 60rpx;
+}
+.listearning{
+  text-align: right;
+  font-size: 22rpx;
+}
+
+.jrsr{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+}
+
+.target-num{
+  font-size: 32rpx;
+}
+.income_list{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+  padding: 0 30rpx;
+  height: 100rpx;
+  background: #fff;
+  align-items: center;
+}
+.order-sum {
+  font-size: 22rpx;
+  color: #666666;
+  margin-left:50rpx;
+}
+.order-sum text{
+  color: #e82576;
+  font-size: 28rpx;
+}
+
+.choosey{
+  height: 100rpx;
+  margin: 20rpx 0;
+  padding: 0 30rpx;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,34 @@
+<view class="dm-top mb20">
+  <view class='dm-user'>
+    <image class='dm-head' src="{{wxImg}}"></image>
+    <view class='dm-name'>{{manName}}</view>
+  </view>
+  <view class='listearning' wx:if="{{sf == 'pt'}}">
+    <view class='earnings'>
+      <text class='target-num'>{{orderNum}}/</text>{{sumOrderNum}}单</view>
+    <view>完成即可获得本月奖金</view>
+    <view class='sum'>¥
+      <text>{{orderMoney}}</text>
+    </view>
+  </view>
+   <view class='jrsr' wx:if="{{sf == 'stu'}}">
+    今日收入：{{nowOrderMoney}}元
+   </view>
+</view>
+<view class='choosey' wx:if="{{sf == 'stu'}}">
+  <text class='yf'>{{yf}}</text> 
+  <picker bindchange="bindyf" mode="date" end="2018-05" fields="month">
+    <view class="picker">
+      点击选择月份
+    </view>
+  </picker>
+</view>
+
+<view class='income_list' wx:for="{{list}}" wx:key="l">
+  <text style='flex:1'>{{item.orderMonth || item.order_month}}月</text>
+  <view class='order-sum'>
+    <text>{{item.orderNum}}</text>单</view>
+  <view class='order-sum'>
+    <text>{{item.orderMoney}}</text>元</view>
+</view>
+<view class='noData' wx:if="{{list.length == 0}}">暂无数据</view>

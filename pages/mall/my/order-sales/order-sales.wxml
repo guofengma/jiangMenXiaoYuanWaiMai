@@ -1,0 +1,26 @@
+
+<import src="../../common/order/index" />
+
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text> 
+</view> 
+ <view class="nav_bg"></view>
+
+<!--退款-->
+ <view wx:if="{{currentTab==0}}">
+ <block wx:for="{{orderSales}}" for-item="item" >
+ <view wx:if="{{item.orderState==5}}" data-orderId="{{item.orderId}}" bindtap="toDtailTab">
+ <template is="myorder" data="{{...item}}"></template>
+</view>
+</block>
+
+ </view>
+
+<!--退货-->
+ <view wx:if="{{currentTab==1}}">
+ <block wx:for="{{orderSales}}" for-item="item">
+ <view wx:if="{{item.orderState==6}}" data-orderId="{{item.orderId}}" bindtap="toOrderTab">
+ <template is="myorder" data="{{...item}}"></template>
+</view>
+</block>
+ </view>

@@ -1,0 +1,43 @@
+@import "../storeDetail/storeDetail";
+
+.store-star {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+
+.comment-star {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 12rpx;
+}
+
+.listTap {
+  height: 128rpx;
+  margin-top: 10rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list_evaluate {
+  border: 1rpx solid #cbcbcb;
+  font-size: 30rpx;
+  color: #4d4d4d;
+  height: 68rpx;
+  width: 162rpx;
+  text-align: center;
+  line-height: 68rpx;
+}
+
+.pink {
+  color: #4d4d4d;
+  border: 1rpx solid #ff7cb2;
+  background: #ffecf4;
+  height: 68rpx;
+  width: 162rpx;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 30rpx;
+}

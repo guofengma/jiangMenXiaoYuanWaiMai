@@ -1,0 +1,29 @@
+<view class='foodList'>
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <view class='shopItems'>
+    <block wx:for="{{storeList}}" wx:for-item="item" wx:key="item">
+      <view class='itemDetail' bindtap='toStoreDetail' data-seqid="{{item.seqId}}">
+        <view class='leftImg'>
+          <image src="{{item.storeImg}}" class="shopImg" mode='aspectFit'></image>
+        </view>
+        <view class='centerText'>
+          <view class='shopName'>{{item.storeName}}
+
+          </view>
+          <view class='saleView'>
+            月销: {{item.storeSale}}
+          </view>
+          <view class='type'>{{item.typeName}} | {{item.storeAddr}}
+          </view>
+          <view class='detail'>起送 ¥ {{item.startFee}} | 配送 ¥ {{item.deliveryFee}} | 人均 ¥ {{item.everyFee}}
+          </view>
+        </view>
+        <view class='rightDistance'>
+          <text class='distance'>{{item.distance}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+.user_discuss {
+  padding: 20rpx;
+}
+
+.user_img {
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  align-items: center;
+}
+.img {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.user_name {
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+  width: 430rpx;
+}
+.start {
+  height: 30rpx;
+  width: 30rpx;
+  margin: 8rpx;
+}
+.discuss_time {
+  font-size: 24rpx;
+  color: gray;
+}
+.discuss_content {
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+  color: #666;
+  font-family: "黑体";
+  padding-left: 100rpx;
+}
+.discuss_img {
+  height:160rpx;
+  width:180rpx;
+  margin-right: 8rpx;
+}
+.dicuss_hei {
+  height: 10rpx;
+  background-color: #f2f3f4;
+}
+.discuss_imgs {
+  display: flex;
+  flex-direction: row;
+  width:95%;
+}

@@ -1,0 +1,29 @@
+/* pages/my/order/order.wxss */
+@import "../../common/order/index.wxss";
+@import "../../common/showModal/showModal.wxss";
+page{
+  background-color: #f2f2f2;
+}
+.nav_bg{
+  height: 20rpx;
+  background-color: #f2f2f2;
+}
+.no-data{
+  color: #ccc;
+  margin-top: 20rpx;
+  width: 100;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.navbar .num{
+  position:absolute;
+  right:23rpx;
+  top:-5rpx;
+  color:red;
+  font-size:26rpx;
+  width:30rpx;
+  height:30rpx;
+  /* background:red; */
+  /* display:inline-block; */
+}

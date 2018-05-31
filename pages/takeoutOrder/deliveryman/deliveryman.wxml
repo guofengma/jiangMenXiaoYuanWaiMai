@@ -1,0 +1,171 @@
+<view class="dm-top mb20" bindtap='getMyInfo'>
+  <view class='dm-user'>
+    <image class='dm-head' src="{{wxImg}}"></image>
+    <view class='dm-name'>{{manName}}</view>
+  </view>
+  <view class='listearning' bindtap='toIncome'>
+    <view class='earnings earnings-title'>我的收益
+      <image src='/images/right-01.png'></image>
+    </view>
+    <view class='earnings' wx:if="{{sf == 'pt'}}">
+      <text class='target-num'>{{orderNum}}/</text>{{sumorderNum}}单
+    </view>
+    <view wx:if="{{sf == 'pt'}}">完成即可获得奖金</view>
+    <view wx:if="{{sf == 'stu'}}">今日收入：{{sumMoney}}元</view>
+  </view>
+</view>
+
+<view class='line-box mb20 psqy-box'>
+  <view class='middle'>
+    <image class='loc-icon' src="/images/qy-01.png" mode="widthFix"></image>
+    <text class='psqy'>配送区域</text>
+  </view>
+  <view>
+    <text class='srea'>{{schoolName}}</text>
+    <text class='delivery'>{{buildNames}}</text>
+  </view>
+</view>
+<view class='line-box mb20 psqy-box'>
+  <view class='middle'>
+    <image class='loc-icon' src="/images/dd-03.png" mode="widthFix"></image>
+    <text class='psqy'>自动接单</text>
+  </view>
+  <view class='srea no-off'>
+    <text>关闭后系统将不会给您派单</text>
+
+    <switch class='no-off' bindchange="setWork" checked="{{isWork == 1?true:false}}"></switch>
+
+  </view>
+</view>
+<view class='line-box speac-bett' bindtap='logout'>
+  <text class='line-name'>退出登录</text>
+  <image class='right' mode='widthFix' src='/images/public/right.png'></image>
+</view>
+
+<view class='storeDetail'>
+  <view class="navbar">
+    <view class='line'></view>
+    <text wx:for="{{orderState}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <swiper current="{{currentTab}}" bindchange="setCurrentTab">
+    <swiper-item>
+      <!-- 新订单 -->
+      <scroll-view class='scrollingList' scroll-y style="height: 100%;">
+
+        <!-- <view class="main" wx:if="{{groupList.length!=0}}"> -->
+        <view class="main">
+          <view class='noData' wx:if="{{xddlist.length == 0}}">暂无数据</view>
+          <view 
+            class='orderlist' 
+            bindtap='toOrderDetail' 
+            wx:for='{{xddlist}}' 
+            wx:key="x"
+            data-seq-Id="{{item.orderId}}"
+          >
+            <view class='listhead'>
+              <text>订单号:{{item.orderSn}}</text>
+              <view>
+                <text class='order-time'>{{item.createTime}}</text>
+                <!-- 赚<text>8</text>元 -->
+              </view>
+            </view>
+            <view class='orderDetails'>
+              <view class='state state-one'>
+                <view class='state-one-green'>
+                  <text>取</text>
+                </view>
+                <image class='line-image' src='/images/ljx-01.png'></image>
+                <view class='state-one-red'>
+                  <text>送</text>
+                </view>
+              </view>
+              <view class='state state-two'>
+                <text class='text-bold'>{{item.storeName}}</text>
+                <text class='text-grey'>{{item.storeAddr}}</text>
+                <text class='text-bold' wx:if="{{sf == 'stu'}}" >{{item.receiveName}}</text>
+                <text class='text-bold' wx:else>{{item.orderBuildManName}}</text>
+                <text class='text-grey'>{{item.receiveAddr}}</text>
+              </view>
+              <view class='state state-three'>
+                <view class='state-threes'>
+                  <text class='text-grey'>取货</text>
+                  <text>{{item.distance}}km</text>
+                </view>
+                <view class='btn' data-seq-Id="{{item.orderId}}" data-order-State="3" catchtap='changeOrderState'>取货</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <!-- <view wx:if="{{claList.length==0}}" class="none no_data">暂无数据</view> -->
+    </swiper-item>
+    <swiper-item>
+      <!-- 待送达 -->
+      <scroll-view class='scrollingList' scroll-y style="height: 100%;">
+        <view class='evaluate'>
+          <view class='noData' wx:if="{{dsdlist.length == 0}}">暂无数据</view>
+          <view class='orderlist' wx:for='{{dsdlist}}' >
+            <view class='listhead'>
+              <text>订单号:{{item.orderSn}}</text>
+              <view>
+                <text class='order-time'>{{item.createTime}}</text>
+                <!-- 赚<text>8</text>元 -->
+              </view>
+            </view>
+            <view class='orderDetails'>
+              <view class='state state-one'>
+                <view class='state-one-green'>
+                  <text>取</text>
+                </view>
+                <image class='line-image' src='/images/ljx-01.png'></image>
+                <view class='state-one-red'>
+                  <text>送</text>
+                </view>
+              </view>
+              <view class='state state-two'  
+                bindtap='toOrderDetail' 
+                wx:key="x"
+                data-seq-Id="{{item.orderId}}">
+                <text class='text-bold'>{{item.storeName}}</text>
+                <text class='text-grey'>{{item.storeAddr}}</text>
+                <text class='text-bold' wx:if="{{sf == 'stu'}}" >{{item.receiveName}}</text>
+                <text class='text-bold' wx:else>{{item.orderBuildManName}}</text>
+                <text class='text-grey'>{{item.receiveAddr}}</text>
+              </view>
+              <view class='state state-three'>
+                <view class='state-threes'>
+                  <text class='text-grey'>取货</text>
+                  <text>{{item.distance}}km</text>
+                </view>
+                <view class='btn1' wx:if="{{sf == 'stu'}}" bindtap='changeOrderState' data-seq-Id="{{item.orderId}}" data-order-State="4">已送达</view>
+                <view class='btn1' wx:else catchtap='call' data-phone="{{item.orderBuildManPhone}}" data-seq-Id="{{item.orderId}}" >送达提醒</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <!-- 已送达 -->
+      <view class='store-info'>
+        <scroll-view class='scrollingList'>
+          <block wx:for="{{ysdOrderList}}" wx:key="y">
+            <view class="list_head" bindtap="showitem">
+              <text class='texts'>{{item.order_date}}</text>
+              <view class='orderReceiving'>共接
+                <text class='text-pink'>{{item.orderNum}}</text>单</view>
+            </view>
+            <view wx:for="{{item.orderList}}" wx:key="o" wx:for-item="oItem">
+              <view class="{{open?'list_data':'display_none'}}">
+                <text>订单编号:{{oItem.orderSn}}</text>
+                <text>{{oItem.createTime}}下单</text>
+              </view>
+            </view>
+          </block>
+          <view class='noData' wx:if="{{ysdOrderList.length == 0}}">暂无数据</view>
+          <!-- <view class="{{open?'list_data list-load':'display_none'}}">点击展开更多</view> -->
+        </scroll-view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

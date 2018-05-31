@@ -1,0 +1,20 @@
+<!--评论  -->
+<template name="discuss">
+  <view class="user_discuss">
+  
+    <view class="user_img">
+      <image src="{{wxImgL}}" class="img"></image>
+      <text class="user_name">{{mbName}}</text>
+      <text class="discuss_time">{{createTime}}</text>
+    </view>
+
+    <view class="discuss_content">{{evaContent}}</view>
+    <view class="discuss_imgs">
+      <block wx:for="{{imgList}}" for-item="item">
+        <image src="{{item.evaImg}}" class="discuss_img"></image>
+      </block>
+    </view>
+
+  </view>
+  <view class="dicuss_hei"></view>
+</template>

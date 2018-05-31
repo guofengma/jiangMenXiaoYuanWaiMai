@@ -1,0 +1,9 @@
+
+.act-img{
+ margin: 0 20rpx;
+}
+.img {
+  width: 100%;
+ margin-top: 20rpx;
+ height: 300rpx;
+}

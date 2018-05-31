@@ -1,0 +1,34 @@
+<view class="store-sales-box">
+
+  <view class='sales-item' wx:for="{{settleList}}">
+    <view class='sales-top'>
+      <text>{{item.settleName}}</text> 
+      <view>
+        <text class='sum'>{{item.orderNum}}</text>
+        <text class='sales-unit'>元</text>
+      </view>
+      
+    </view>
+    <view class='sales-bottom'>
+      <view>
+        <text class='sales-count'>{{item.orderMoney}}单</text>
+      </view>
+      <text class='status'>{{item.settleStateTxt}}</text>
+    </view>
+    
+     <!-- <image class='month-bg' mode="widthFix" src="/images/takeout/month-bg.png"></image>
+    <text class='month'>{{item.orderDate}}月</text>
+    <text class='sales-num'>本月销售总额: ￥{{item.orderMoney}}</text> 
+     <text class='state'>已到账</text>
+    <text class='btn'>申请提现</text>
+  </view>
+  
+ <view class='sales-item'>
+    <image class='month-bg' mode="widthFix" src="/images/takeout/month-bg.png"></image>
+    <text class='month'>12月</text>
+    <text class='sales-num'>本月销售总额: ￥1997</text>
+     <text class='state'>已到账</text>
+    <text class='btn'>申请提现</text>   -->
+  </view>
+  <view class='noData' wx:if="{{settleList.length == 0}}">暂无数据</view>
+</view>

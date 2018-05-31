@@ -1,0 +1,182 @@
+/* pages/template/my/my.wxss */
+page{
+  background-color: #f1f1f1;
+}
+
+.header-container {
+  position: relative;
+}
+.bg{
+  color: #f58848;
+  font-weight: bold
+}
+.bg0{
+  color: #00d6fc;
+  font-weight: bold
+}
+.bg1{
+  color: #f8a408;
+  font-weight: bold
+}
+.bg2{
+  color: #7ccf29;
+  font-weight: bold
+}
+.bg3{
+  color: #8446c5;
+  font-weight: bold
+}
+.user-image {
+  width: 100%;
+  height: 250rpx;
+  background-color: #e82576;
+}
+
+.user-info {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  display: flex;
+  width: 100%;
+}
+
+.user-info > image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  border:5rpx solid #fff;
+  box-sizing:border-box; 
+
+}
+
+.user-info text {
+  flex: 2;
+  color: #fff;
+  align-self: center;
+  margin-left: 30rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.user-info view {
+  display: flex;
+  width: 50px;
+  align-items: center;
+}
+.fr5{
+  margin-right: 5px;
+}
+.user-list{
+  /* margin-top: 20rpx; */
+  height: 100rpx;
+  background-color: #fff;
+  color: #333;
+  margin:0 20rpx;
+  border-bottom: solid 1rpx #f1f1f1;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.user-list text{
+ flex: 1;
+ vertical-align: middle;
+ display: inline-block
+}
+.all-order text{
+  color: #666;
+  font-size: 28rpx;
+}
+.all-order image{
+  height: 30rpx;
+  width: 16rpx;
+  vertical-align: middle;
+}
+/* .all-circle{
+  height:44rpx;
+  width: 44rpx;
+  background-color: #ff5e5c;
+  border-radius: 50rpx;
+  margin-right:20rpx;
+  margin-left:30rpx; 
+} */
+.order-bg{
+  height: 200rpx;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+}
+.order{
+  width: 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.order image{
+  height: 60rpx;
+  width: 60rpx;
+}
+.order text{
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.address{
+  margin-top: 20rpx;
+  height: 60rpx;
+  background-color: #FFF;
+  font-size: 32rpx;
+  color: #333;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.address text{
+  flex: 1;
+}
+.address image{
+  height: 28rpx;
+  width: 28rpx;
+}
+
+.provier-data{
+  /* position: fixed; */
+  color:gray;
+  font-size: 24rpx;
+  bottom: 8rpx;
+  width: 100%;
+  text-align: center;
+}
+.list-box{
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.user-liat-icon{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+  margin-left: 30rpx;
+}
+
+
+/*客服  */
+.contact-box{
+  position: relative;
+}
+.contact-btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 2;
+}

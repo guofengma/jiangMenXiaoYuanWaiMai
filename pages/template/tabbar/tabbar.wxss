@@ -1,0 +1,49 @@
+/* 菜单栏 */
+.tabbar_box {
+  font-size: 22rpx;
+  color: #666;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 120rpx;
+  border-top: 1rpx solid gray;
+}
+.tabbar_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  background-color: #FFFFFF;
+  height: 100%;
+}
+.tabbar_icon {
+  width: 45rpx;
+  height: 45rpx;
+}
+.tabbar_photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  height: calc(120rpx + 20rpx);
+  width: calc(120rpx + 20rpx) !important; 
+  border-radius: 50%;
+  position: relative;
+  bottom: 20rpx !important;
+  background-color: #FFFFFF;
+  box-shadow: 0 0px 3px #DCDCDC;
+  z-index: 9999;
+}
+.tabbar_photo .tabbar_icon{
+  width: 95rpx;
+  height: 95rpx;
+  position: relative;
+  bottom: 2px;
+}

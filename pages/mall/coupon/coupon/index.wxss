@@ -1,0 +1,38 @@
+.coupon_bg{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+
+}
+.coupon_img{
+  height:200rpx;
+  width:100%;
+}
+.img_right{
+  background-color: #3fbeb8;
+   height:160rpx;
+   width:20%;
+   display: flex;
+   align-items: center;
+}
+.un_img_right{
+  background-color:#ccc;
+   height:160rpx;
+   width:20%;
+   display: flex;
+   align-items: center;
+}
+
+
+.coupon_right{
+  height:80rpx;
+  width:60rpx;
+}
+.coupon_txt{
+  margin-right:30rpx;
+  font-size:28rpx;
+  color: #fff;
+  width: 20%;
+}

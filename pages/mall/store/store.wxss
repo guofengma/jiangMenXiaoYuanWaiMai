@@ -1,0 +1,75 @@
+@import "../list/list.wxss";
+page{
+  background: #e2e2e3;
+}
+.store-top-box{
+  margin-bottom: 20rpx;
+}
+.store-top{
+  height: 150rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  display: table-cell;
+  vertical-align: middle;
+  background: #681fae;
+  width: 750rpx;
+}
+.store-logo{
+  max-width: 180rpx;
+  max-height: 70rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.store-name{
+  color: #fff;
+  font-size: 32rpx;
+}
+
+/* .cate-box{
+  overflow: auto;
+  height: 100rpx;
+  display: flex;
+}
+.cate-box::-webkit-scrollbar{display:none}   
+
+.cate-item{
+  flex:  0 0 160rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+} */
+
+.cate-box{
+  overflow-x: auto;
+  height: 100rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #c9c8c8;
+}
+.cate-box::-webkit-scrollbar{display:none}   
+
+.cate-item{
+   flex:  0 0 160rpx; 
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+}
+.cate-item.active{
+  color:#fc3131;
+  position: relative;
+}
+.cate-item.active:after{
+  position: absolute;
+  content: ""; 
+  display: block; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  height:4rpx; 
+  background: #fc3131; 
+}

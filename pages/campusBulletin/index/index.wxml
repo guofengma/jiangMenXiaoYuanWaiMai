@@ -1,0 +1,41 @@
+<!-- 校园公告 列表 -->
+<view class='line'></view>
+<view class='bulletin-title'>
+  <text>校园公告</text>
+</view>
+<!--公告列表  -->
+<view class='bulletins-box list-box' style='display:none;'>
+
+  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" data-noticeid="{{item.seqId}}">
+    <image class='item-view-img' mode="widthFix" src="{{item.infoImg}}"></image>
+    <view class='item-info'>
+      <text class='item-title'>{{item.infoTitle}}</text>
+      <view class='item-cont'>
+        <text class='item-text'>{{item.infoIntro}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class='list-item'>
+    <image class='item-view-img' src="//m.360buyimg.com/mobilecms/s640x480_jfs/t13108/177/338632451/223756/1a450cf4/5a090d80N6d278c41.jpg!q65.webp"></image>
+    <view class='item-info'>
+      <text class='item-title'>马丁靴怎么穿才不像去搬砖？</text>
+      <view class='item-cont'>
+        <text class='item-text'>到了寒风刺骨的冬日，终于能把藏了很久的马丁靴拿到这里聊一聊了。为什么说藏了很久呢？因为这样一双男女通吃的时尚单品，在寒冬中既能抗冻肯定也是你鞋柜里最帅的一双鞋！</text>
+      </view>
+    </view>
+  </view> -->
+
+</view>
+
+<scroll-view scroll-y class="bulletins-box list-box"  bindscrolltolower="lower" bindscroll="scroll">
+  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" data-noticeid="{{item.seqId}}">
+    <image class='item-view-img' mode="widthFix" src="{{item.infoImg}}"></image>
+    <view class='item-info'>
+      <text class='item-title'>{{item.infoTitle}}</text>
+      <view class='item-cont'>
+        <text class='item-text'>{{item.infoIntro}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

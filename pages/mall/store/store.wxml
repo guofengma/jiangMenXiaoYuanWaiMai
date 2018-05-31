@@ -1,0 +1,25 @@
+<import src="../list/goods/goods"/>
+<!--pages/store/store.wxml-->
+<view class='store-top-box'>
+  <view class='store-top'>
+  <image src="{{spLogoImg}}" mode="widthFix"  class='store-logo'></image>
+  <text class='store-name'>{{spName}}</text>
+</view>
+</view>
+<view class="cate-box">
+  <text class="cate-item {{index == currentcate ?'active':''}}" data-idx="{{index}}" data-seqId="{{item.seqId}}" wx:for="{{goodsClaList}}" bindtap='cateTap'>{{item.className}}</text>
+</view>
+<view class="navbar">
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">
+    <text wx:if="{{rank==3}}" class="up">{{item}}</text>
+    <text wx:elif="{{rank==4}}" class="down">{{item}}</text>
+    <text wx:else>{{item}}</text>
+  </view>
+</view>
+ 
+ <!--商品列表  -->
+<view class='pro-boxs'>
+  <view class='pro-item' wx:for="{{goodsList}}" for-item="item" bindtap="toDetailTab">
+    <template is="goods" data="{{...item}}"></template>
+  </view>
+</view>

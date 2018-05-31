@@ -1,0 +1,22 @@
+<template name="showModal">
+<view class="modal" wx:if="{{showModal}}">
+		<view class="modal-tip">提示</view>
+
+		<view class="modal-text" wx:if="{{showModal==1}}">订单还没付款,是否要取消吗?</view>
+
+		<view class="modal-text" wx:else>确认删除订单吗?</view>
+    
+		<view class="modal-btn" wx:if="{{showModal==1}}">
+			<view class="modal-cancel"  bindtap="delIndent_operation">取消订单</view>
+			<view   class="modal-sure"bindtap="hiddenModal">再考虑下</view>
+		</view>
+
+		<view class="modal-btn" wx:else>
+			<button style="padding: 0 60rpx;" bindtap="delIndent_operation">确定</button>
+			<button style="padding: 0 60rpx;" bindtap="hiddenModal">取消</button>
+		</view>
+
+	</view>
+
+	<view class="modal-layer" wx:if="{{showModal!=0}}"></view>
+  </template>

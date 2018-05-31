@@ -1,0 +1,57 @@
+<import src="../../mall/common/order-detail/index" />
+
+<!-- 收货地址 -->
+<view class="order_address_bg" >
+  <template is="order-detail" data="{{userName,userAddr,telNumber}}"></template>
+</view>
+
+
+<!--订单详情  -->
+<view class='order'>
+
+  <view class='order-header'>
+    <view class='label'>订单详情</view>
+    <view class='order-state'>{{orderDetail.orderStateTxt}}</view>
+  </view>
+  <view wx:for="{{goodsList}}">
+    <view class='order-list'>
+      <view class='order-content'>
+        <image src='{{item.goodsImg}}'></image>
+        <view>
+          <view class='order-con-right'>
+            <text class='ot1'>{{item.goodsName}}</text>
+            <text class='ot2'>￥{{item.goodsPrice}}</text>
+          </view>
+          <view class='order-right-num'>
+            <text>x{{item.goodsNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+<!--配送费   -->
+<view class='cost2'>
+  <text>配送费</text>
+  <text>￥{{orderDetail.deliveryFee}}</text>
+</view>
+<!--合计  -->
+<view style='  background-color: white;'>
+  <view class='cost3'>
+    <text>合计</text>
+    <text>￥{{orderDetail.orderPrice}}</text>
+  </view>
+</view>
+
+<!--按钮  -->
+<view class='but-box'>
+
+<button class='but' bindtap='agin' wx:if="{{orderDetail.orderState == 4 || orderDetail.orderState == 5}}" >再来一单</button>
+<button class='but' bindtap='agin' >再来一单</button>
+
+
+</view>

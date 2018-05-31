@@ -1,0 +1,80 @@
+ page{
+	background: #f1f1f1;
+	font-size: 30rpx;
+}
+.mystore-top{
+  height: 130rpx;
+	padding: 20rpx;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20rpx;
+	background: #fff;
+}
+.store-logo{
+	width: 100rpx;
+  height:100rpx;
+	margin-right: 20rpx;
+}
+.store-name{
+	font-size: 30rpx;
+}
+ .lines-box{
+  margin: 20rpx 0;
+} 
+.sales-title{
+  padding: 0 30rpx;
+  height: 98rpx;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 98rpx;
+  background: #fff;
+}
+.sales{
+  padding: 0 30rpx;
+  display: flex;
+  height: 98rpx;
+  color: #666666;
+  padding-left: 82rpx;
+  line-height: 98rpx;
+  background: #fafafa;
+}
+.sales .left-sum {
+  flex: 1;
+}
+.sales .sum{
+  color:#1a1a1a;
+  margin-right:10rpx; 
+}
+.line-box{
+	height: 98rpx;
+	background: #fff;
+	padding: 0 30rpx;
+	font-size: 30rpx;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content:flex-start;
+}
+.interval{
+  margin: 10rpx 0 8rpx 0;
+}
+.right-arrow{
+  height: 30rpx;
+  width: 16rpx;
+}
+.line-icon{
+	width: 30rpx;
+	margin-right: 20rpx;
+}
+.line-text{
+	width: 630rpx;
+	display: inline-block;
+}
+.line-style{
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content:flex-start;
+  height: 98rpx;
+} 

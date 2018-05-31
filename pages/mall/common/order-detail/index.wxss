@@ -1,0 +1,65 @@
+
+.detail_nav {
+  padding: 20rpx;
+  height: 120rpx;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: row;
+  color: #333;
+}
+
+.protion_img {
+  height: 120rpx;
+  width: 100rpx;
+  display: flex;
+
+}
+
+.gps_bg {
+  height:50rpx;
+  width:40rpx;
+margin-top:10px;    
+}
+.order_user{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.user_name{
+  display: flex;
+  flex-direction: row;
+  font-size:32rpx;
+  justify-content: space-between;
+  width: 100%;
+  color: #333;
+}
+.order_addrss{
+  font-size:28rpx;
+  color: grey;
+  height: 80rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+.right_img {
+  height: 30rpx;
+  width: 16rpx;
+  margin-bottom:30rpx;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top:25rpx;
+
+}
+
+.view_img {
+  height:3rpx;
+  width: 100%;
+  position: absolute;
+  background: #e2e2e2;
+}

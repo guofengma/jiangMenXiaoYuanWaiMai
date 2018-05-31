@@ -1,0 +1,97 @@
+/*@import '../../common/common.wxss';*/
+
+page {
+  background-color: #fff;
+  font-family: "Helvetica Neue",
+                 "Hiragino Sans GB",
+                 "Microsoft YaHei",
+                 "\9ED1\4F53",
+                 Arial,
+                 sans-serif;
+  font-size: 28rpx;
+}
+
+page, .main {
+  height: 100%;
+}
+
+.categroy-left {
+  float: left;
+  width: 180rpx;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  color: #666;
+}
+
+.categroy-left .cate-list {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom: solid #FFF 1rpx;
+}
+
+.categroy-left .cate-list.on {
+  color: #6db5bf;
+  background-color: #fff;
+}
+
+.categroy-right {
+  float: right;
+  width: 570rpx;
+  height: 100%;
+  overflow: hidden;
+}
+
+.goods_title {
+  height: 60rpx;
+  border-bottom: 2rpx solid #ccc;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #28b1ab;
+}
+
+.cate-box {
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+}
+
+.cate-box .cate-banner image {
+  display: block;
+  width: 100%;
+  height: 240rpx;
+}
+
+.product-list {
+  display: inline-block;
+  width: 260rpx;
+  height: 240rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.product-list image {
+  /* width: 240rpx; */
+  width: 100%;
+  height: 240rpx;
+  border-radius: 5rpx;
+}
+
+.product-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+.goods_name {
+  height: 70rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.no_data{
+  font-size:28rpx;
+  color: #666;
+  text-align: center;
+  margin-top:20rpx; 
+}

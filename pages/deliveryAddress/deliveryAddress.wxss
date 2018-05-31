@@ -1,0 +1,99 @@
+ page{
+  background-color:#f0f0f0;
+  font-size: 28rpx;
+ 
+} 
+.box{
+   background-color: white;
+    margin-bottom: 10rpx;
+   border-top: 1px solid #f0f0f0;
+}
+icon{
+  align-items: center;
+}
+.site{
+  color: #e82576;
+}
+.message{
+height: 150rpx;
+padding: 0 30rpx;
+display: flex;
+font-size: 33rpx;
+align-items: center;
+border-bottom: 1px solid #f0f0f0;
+}
+.message-content{
+  display: flex;
+  width:690rpx;
+  justify-content: space-between;
+}
+.address{
+  padding: 0 30rpx;
+  font-size: 33rpx;
+  
+}
+.address image{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+
+.address{
+  display: flex;
+  justify-content: space-between; 
+  height: 80rpx;
+  align-items: center;
+ 
+}
+
+.caozuo{
+  display: flex;
+}
+
+/* 未选中样式 */
+checkbox .wx-checkbox-input {
+border-radius: 5rpx;
+width: 28rpx;
+height: 28rpx;
+border-color: #f0f0f0;
+}
+
+/*多选框样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+border-radius: 5rpx;
+width: 32rpx;
+height: 32rpx;
+border: none;
+background: #e02576;
+}
+
+/* 选中后勾子样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+width: 30rpx;
+height: 30rpx;
+line-height: 30rpx;
+text-align: center;
+font-size: 27rpx;
+color: #fff;
+background: transparent;
+}
+.addsite{
+  width: 90%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #e02576;
+  border-radius: 10rpx;
+  color: #fefefe;
+  font-size: 36rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  /* position: fixed;
+  bottom: 50rpx; 
+  left:35rpx;  */
+}
+
+.mr-state-icon{
+  width: 40rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,13 @@
+.line-box{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  border-bottom:1px solid #f0f0f0;
+}
+.top{
+  font-weight: 600;
+   border-top:1px solid #f0f0f0;
+}

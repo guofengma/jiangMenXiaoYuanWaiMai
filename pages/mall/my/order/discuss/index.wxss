@@ -1,0 +1,95 @@
+page {
+  background-color: #f3f3f3;
+}
+
+.discuss_bg {
+  height: 450rpx;
+  margin: 20rpx;
+  background-color: #fff;
+}
+
+.discuss_txt {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+
+.text {
+  height: 320rpx;
+  font-size: 32rpx;
+}
+
+.discuss_img {
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.add_img {
+  margin-left: 20rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+
+
+.start_num {
+  display: flex;
+  flex-direction: row;
+}
+
+.start {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.start_num {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20rpx;
+}
+
+.user_bg {
+  font-size:28rpx;
+  color: #333;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.goods_btn {
+  height: 90rpx;
+  background-color: #28c5be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  font-size: 32rpx;
+}
+
+
+.start_bg {
+  height: 90rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+    line-height: 90rpx;
+    font-size: 32rpx;
+}
+/*星级评级*/
+.image_bg{
+  /* display: flex; */
+  flex-direction: row;
+  margin-left: 20rpx;
+  float: right;
+  height: 100rpx;
+  line-height: 110rpx;
+}
+.image_bg image{
+  height: 40rpx;
+  width: 40rpx;
+   margin-right:20rpx;
+}

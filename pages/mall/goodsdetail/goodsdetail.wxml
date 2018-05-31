@@ -1,0 +1,177 @@
+<import src='../wxParse/wxParse' />
+<import src="argument/argument" />
+
+<swiper class="swiper" indicator-dots="true" autoplay="false" circular="true" indicator-active-color="#fc3131" indicator-color="#fff">
+  <block wx:for="{{goodsSwiperImgs}}">
+    <swiper-item>
+      <image src="{{item}}" class="swiper"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="content">
+  <view class="goods_txt">{{goodsDetail.goodsName}}</view>
+  <view class="price">¥ {{goodsDetail.goodsPrice}}</view>
+  <!-- <view class="nums">
+    <text class="repertory">库存：{{goodsDetail.goodsStock}}</text>
+    <text class="repertory">销量：{{goodsDetail.saleNums}}</text>
+  </view> -->
+</view>
+
+<!--商品参数-->
+<!-- 
+<view class="selcolor" wx:if="{{goodsParamList.length==0}}">
+  <view class="sel">商品参数</view>
+  <image src="/image/right.png" class="right"></image>
+</view>
+
+<view wx:else class="selcolor" bindtap="argumentTab" data-status="2">
+  <view class="sel">商品参数</view>
+  <image src="/image/right.png" class="right"></image>
+</view> -->
+
+<view class="sku-box none">
+  <view class="sku-checked">
+    已选 <text class='sku-option'> 黄金版 </text>
+    <text class='sku-option'> 3+32GB </text>
+    <text class='sku-ck-num'>1</text>个
+  </view>
+  <view class='sku-info'>
+    <view class='sku-item clearfix'>
+       <text class='sku-k'>颜色</text>
+      <view class='sku-v-box'>
+        <text class='sku-v active'>玫瑰金</text>
+        <text class='sku-v'>皓月银</text>
+        <text class='sku-v'>灰色</text>
+        <text class='sku-v'>玫瑰金</text>
+        <text class='sku-v'>皓月银</text>
+        <text class='sku-v'>灰色</text>
+      </view> 
+    </view>
+  </view>
+</view>
+<!--数量  -->
+<view class='num-handle sku-item clearfix'>
+  <text class='sku-k'>数量</text>
+  <view class='sku-v-box'>
+    <view class="sub" bindtap="subTab">-</view>
+    <text class='num'>{{nums}}</text>
+    <view class="add" bindtap="addTab">+</view>
+  </view> 
+</view>
+
+<!--商品参数-->
+<view class="drawer_screen" bindtap="argumentTab" data-status="0" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <view class="sel_color">
+    <view class="argument">
+      <view class="arg_txt">商品参数</view>
+      <scroll-view scroll-y class="brand-bg" >
+      <block wx:for="{{goodsParamList}}" for-item="item">
+        <view class="brand">
+          <text class="brand_txt">{{item.paramName}}</text>
+          <text class="brand_txt"> {{item.paramVal}}</text>
+        </view>
+      </block>
+      </scroll-view>
+      <view class="finsh" bindtap="argumentTab" data-status="0">完成</view>
+    </view>
+  </view>
+</view>
+
+<!--商品的店铺信息  -->
+<!-- <view class="store-box" wx:if="{{spId}}"> -->
+<view class="store-box" style='display:none;'>
+  <view class='store-title'>
+    <image src="{{spImg}}" mode="widthFix" class='store-logo'></image>
+    <text class='store-name'>{{spName}}</text>
+  </view>
+  <view class='store-intro'>
+    <text class='pro-num' style='display:none;'>全部商品： {{storeGoodsNum}}</text>
+    <view class='btn' data-storeid="{{spId}}" bindtap='gotoStore'>
+      <image src='/images/shop/store.png' class='btn-icon'></image>进入店铺
+    </view>
+  </view>
+</view>
+
+<!--商品评价  -->
+<view class='comments'>
+  <view class='comment-tit' wx:if="{{evaList.length}}">评价</view>
+  <view class='comment-box' wx:if="{{evaList.length}}">
+    <view class='comment-user clearfix'>
+      <image class='comment-user-head' src="{{evaList[0].wxImg}}"></image>
+      <text class='comment-user-nickname'>{{evaList[0].mbName}}</text>
+      <text class='comment-time'>{{evaList[0].createTime}}</text>
+    </view>
+    <view class='comment-cont'>
+      <text class='comment-word'>{{evaList[0].evaContent}}</text>
+    </view>
+  </view>
+  <view class='comment-foot clearfix' wx:if="{{evaList.length}}">
+    <text>共{{evaList.length}}条评论</text>
+    <text class='fr' bindtap="allDiscuss" data-goodsId="{{goodsId}}">查看更多>></text>
+  </view>
+  <view class='noData' wx:if="{{!evaList.length}}">暂无评价</view>
+</view>
+
+<view class="goodsdetail">商品详情</view>
+
+<!--富文本内容-->
+<view class="parse">
+  <template is="wxParse" data="{{wxParseData:insertData.nodes}}" />
+</view>
+
+
+
+<view class="paid_bg">
+
+<!-- <contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+  class="call_bg call_right">
+ </contact-button> -->
+<button class='kf-btn' open-type="contact" >
+  <image class='kf-icon' src="/images/shop/kefu.png"></image>
+  <text class='kf-wd'>客服</text>
+</button>
+  <view class="addCart" bindtap="addCartTab">加入购物车</view>
+  <view class="pay" bindtap="toSaveOrder" data-status="1">立即购买</view>
+</view>
+
+
+
+<!--选择颜色-->
+<view class="drawer_screen" bindtap="selColorTab" data-status="0" wx:if="{{selColorStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{selColorStatus}}">
+  <image class="close_icon" bindtap="selColorTab" src="/images/black.png" data-status="0"></image>
+
+  <view class="sel_color">
+    <view class="color_bg">
+
+      <view class="image_txt">
+        <view class="iamge">
+          <image class="iamge" src="{{goodsDetail.goodsImg}}"></image>
+        </view>
+        <view class="txt">
+          <text class="txt_price">¥：{{goodsDetail.goodsPrice}}</text>
+          <text class="goodsStock">存库{{goodsDetail.goodsStock}}件</text>
+        </view>
+      </view>
+
+
+      <view class="sel_nums">
+        <text class="nums_txt">数量</text>
+        <view class="sel_iput">
+          <view class="{{nums==1?'sub':'add'}}" bindtap="subTab" data-sub="{{nums}}">-</view>
+          <input type="number" class="input" value="{{nums}}" disabled="false" />
+          <view class="{{nums==goodsStock?'sub':'add'}}" bindtap="addTab" data-nums="{{nums}}">+</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="cart_btn">
+      <view class="pay_cart" bindtap="toSaveOrder" data-goodsId="{{goodsId}}">立即购买</view>
+    </view>
+  </view>
+</view>

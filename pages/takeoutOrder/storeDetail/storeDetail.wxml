@@ -1,0 +1,178 @@
+<view class='storeDetail'>
+
+  <view class='header'>
+    <view class='leftImg'>
+      <image src='{{bean.storeImg}}' mode='aspectFit'></image>
+    </view>
+    <view class='rightText'>
+      <view class='fateView'>起送 ¥ {{bean.startFee}} | 配送 ¥ {{bean.deliveryFee}} | 人均 ¥ {{bean.everyFee}}
+      </view>
+      <!-- <view class='noticeView'>
+        <view class='noticeImg'>
+          <image src='/images/takeoutOrder/notice.png' mode='aspectFit'></image>
+        </view>
+        <view class='noticeText'>高峰时间请提前下单, 以免耽误您的用餐时间!
+        </view>
+      </view> -->
+    </view>
+  </view>
+
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+
+<swiper current="{{currentTab}}" bindchange="setCurrentTab">
+    <swiper-item>
+  
+  <!-- 点菜 -->
+  <view class="main" wx:if="{{groupList.length!=0}}">
+
+    <view class='cartFoot'>
+      <view class='commitOrder' bindtap='commitOrder'>结算
+      </view>
+      <view class='fateView'>
+        <view class='cartView'>
+          <image src='/images/takeout/wmc.png' mode='aspectFit'>
+          </image>
+        </view>
+        <view class='textView'>
+          <view class='fateText'> ¥ {{orderInfo.totPrice}}
+          </view>
+          <view class='sendFate'>另需配送费 ¥ {{bean.deliveryFee}}</view>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 左侧菜品分类 -->
+    <scroll-view scroll-left="0" scroll-y="true" class="categroy-left">
+      <view wx:for="{{groupList}}" wx:key="index" data-id="{{index}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{curIndex === index?'on':''}}">{{item.groupName}}</view>
+    </scroll-view>
+
+    <!-- 菜品 -->
+    <scroll-view class="categroy-right" scroll-y="true">
+      <view class='titleView'>
+        <text class='storeName'>{{groupList[curIndex].groupName}}</text>
+      </view>
+      <view class="cate-box">
+
+        <view class="product-list" wx:for="{{groupList[curIndex].foodList}}" wx:key="index" wx:for-item="val">
+          <view class='leftImg' bindtap='showFood' data-foodimg="{{val.foodImg}}" data-foodname="{{val.foodName}}" data-foodsalenum="{{val.foodSaleNum}}" data-price="{{val.foodPrice}}">
+            <image src="{{val.foodImg}}" mode='aspectFit'></image>
+          </view>
+          <view class='rightText' bindtap='showFood' data-foodimg="{{val.foodImg}}" data-foodname="{{val.foodName}}" data-foodsalenum="{{val.foodSaleNum}}" data-price="{{val.foodPrice}}">
+            <view class='foodName'>{{val.foodName}}
+            </view>
+            <view class='foodSale'>月售 {{val.foodSaleNum}}
+            </view>
+            <view class='foodPrice'> ¥ {{val.foodPrice}}
+            </view>
+          </view>
+          <view class='changeNum'>
+            <image src='/images/takeout/sub.png' class="sub-btn {{cartData[val.seqId]?'':'none'}}" bindtap='subProNum' data-proid="{{val.seqId}}" mode='aspectFit'></image>
+            <input type="number" class="input {{cartData[val.seqId]?'':'none'}}" value="{{cartData[val.seqId].num}}" disabled="false" />
+            <image src='/images/takeout/add.png' class='add-btn' bindtap='addProNum' data-index="{{index}}" data-proid="{{val.seqId}}" mode='aspectFit'></image>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+    
+  </view>
+  <view wx:if="{{claList.length==0}}" class="none no_data">暂无数据</view>
+  </swiper-item>
+<swiper-item>
+  <!-- 评价 -->
+  <view class='evaluate'>
+    <view class='shopScore'>
+      <view class='scoreDetail'>
+        <view class='scoreText'>{{commentScore}}
+        </view>
+        <view class='shopText'>商家评分
+        </view>
+      </view>
+      <view class='scoreStar'>
+        <image wx:for="{{stars}}" wx:for-item="itm" class='store-star' src="{{index<commentScore?goodStar:defaultStar}}"></image>
+      </view>
+    </view>
+
+    <view class='scoreType' style='display:none'>
+      <view class='all'>全部(20)</view>
+      <view class='positive'>好评(10)</view>
+      <view class='moderate'>中评(5)</view>
+      <view class='negative'>差评(5)</view>
+    </view>
+
+    <view class='comment'>
+
+        <view class='commentItem' wx:for="{{commentList}}" >
+          <view class='userInfo'>
+            <view class='userImg'>
+              <image src='{{item.mbImg}}' mode='aspectFit'></image>
+            </view>
+            <view class='userView'>
+              <view class='nameView'>
+                <view class='commentTime'>{{item.commentTimeFmt}}</view>
+                <view class='userName'>{{item.mbName}}
+                </view>
+
+              </view>
+
+              <view class='scoreStar'>
+                <image wx:for="{{stars}}" wx:for-item="itm" class='comment-star' src="{{index<item.commentScore?goodStar:defaultStar}}"></image>
+              </view>
+            </view>
+
+          </view>
+          <view class='commentDetail'>
+            <view class='commentText'>{{item.commentContent}}</view>
+          </view>
+        </view>
+
+
+    </view>
+
+  </view>
+</swiper-item>
+<swiper-item>
+  <!-- 商家 -->
+  <view class='store-info'>
+    <view class='store-contact'>
+      <image class='store-addr-icon' mode='widthFix' src="/images/shop/location.png"></image>
+      <text class='store-addr'>{{bean.storeAddr}}</text>
+      <image class='call-icon' bindtap='callStore' data-phone="{{bean.storePhone1}}" mode='widthFix' src="/images/takeout/call.png"></image>
+    </view>
+    <view class='store-imgs'>
+      <image class='store-img' wx:if="{{index < 4}}" bindtap="previewImage" data-src="{{item.imgPath}}" wx:for="{{bean.storeImgs}}" src="{{item.imgPath}}"></image>
+      <!-- <image class='store-img' src="/images/takeout/store-img.jpg"></image> -->
+    </view>
+    <view class='open-time-box'>
+      <image class='time-icon' src="/images/takeout/open-time.png"></image>
+      <text class='open-time'>营业时间：  {{bean.storeStartTime}} -- {{bean.storeEndTime}}</text>
+    </view>
+  </view>
+  <!--店铺简介  -->
+  <view class='store-synopsis-box'>
+    <text class='store-synopsis'>
+    {{bean.storeDesc}}
+    </text>
+  </view>
+</swiper-item>
+</swiper>
+
+<!-- 遮罩显示商品详情 -->
+<view class='shade' wx:if="{{showFoodDetail}}" bindtap='closeShow'>
+  <view class='pro-box'>
+    <image class='pro-img' mode="aspectFill" src="{{foodDetail.foodImg}}"></image>
+    <view class='pro-info'>
+      <text class='pro-item pro-name'>{{foodDetail.foodName}}</text>
+      <!-- <text class='pro-item pro-desc'></text> -->
+      <text class='pro-item pro-sales'>月售：{{foodDetail.foodSaleNum}}</text>
+      <text class='pro-item pro-price'>￥{{foodDetail.foodPrice}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+</view>

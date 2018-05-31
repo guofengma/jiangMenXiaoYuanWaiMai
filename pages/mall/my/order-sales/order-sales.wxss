@@ -1,0 +1,9 @@
+
+@import "../../common/order/index.wxss";
+page{
+  background-color:  #f3f3f4;
+}
+.nav_bg{
+  height: 2rpx;
+  background-color:gray;
+}

@@ -1,0 +1,42 @@
+
+<view class="goods_bg">
+<image src="{{salesDetail.goodsImg}}" class="goods_img"></image>
+<view class="goods_pri">
+<text>{{goodsName}}</text>
+<text class="goods_color">颜色：{{salesDetail.goodsColor}}</text>
+<view class="pri_bg">
+¥<text class="price">{{salesDetail.orderPrice}}</text>
+</view>
+</view>
+</view>
+
+<view class="sales">
+<view class="nums">
+<text>退换数量</text>
+<text>×{{salesDetail.goodsNums}}</text>
+</view>
+
+<view class="nums">
+<text>状态</text>
+<text class="state_txt">{{salesDetail.orderStateTxt}}</text>
+</view>
+<view class="nums">
+<text>快递</text>
+<text>{{salesDetail.express}}</text>
+</view>
+
+<view class="express">
+<text>快递单号:</text>
+<view wx:if="{{salesDetail.salesState==0}}">
+<input type="number" placeholder="填写订单" placeholder-class="expree_num" bindblur="getExpressNum"  class="expree_num"/>
+</view>
+<view wx:if="{{salesDetail.salesState==1}}">
+<text>{{salesDetail.orderSn}}</text>
+</view>
+</view>
+</view>
+
+
+<view class="goods_btn" bindtap="sumbitTab" wx:if="{salesDetail.salesState==0}}">
+<text>提交</text>
+</view>

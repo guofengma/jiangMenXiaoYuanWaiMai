@@ -1,0 +1,121 @@
+page{
+      background-color:#f0f0f0;    
+/* background: rgba(0,0,0,0.5); */
+  
+}
+.person{
+  display: flex;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #f0f0f0;
+  height: 98rpx;
+  align-items: center;
+  font-size: 28rpx;
+   background-color: white; 
+  
+}
+.write{
+  width: 450rpx;
+  margin-left: 98rpx;
+  font-size: 24rpx;
+}
+
+.address{
+  display: flex;
+  padding: 0 30rpx;
+  /* border-bottom: 1px solid #f0f0f0; */
+  height: 98rpx;
+  align-items: center;
+  font-size: 28rpx;
+  justify-content: space-between;
+  position: relative;
+  background-color: white;
+  
+}
+.address .address-content{
+  position: absolute;
+  width: 418rpx;
+   font-size: 24rpx;
+   left: 210rpx;
+}
+.address-wri{
+  display: flex;
+  padding: 0 30rpx;
+  
+  /* height: 98rpx; */
+  align-items: center;
+  font-size: 28rpx;
+  color: #999999;
+  
+}
+.address-show{
+  background-color: white;  
+  height: 98rpx;
+  padding-left: 211rpx;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 98rpx;
+}
+
+/*上拉  */
+
+::-webkit-scrollbar{
+  width: 0rpx;
+  height: 0rpx;
+  color: transparent;
+}
+.menu{
+  height: 572rpx;
+  width: 100%;
+  background-color: white;
+   position: absolute;
+  bottom: 0rpx;
+  padding: 0 30rpx;
+ z-index: 999;
+}
+
+.hander{
+  height: 88rpx;
+  line-height: 88rpx;
+  
+}
+.hander text:first-child{
+  font-size: 30rpx;
+  color: #f35b75;
+  
+}
+.hander text:last-child{
+  font-size: 30rpx;
+  margin-left: 242rpx;
+}
+
+.list{
+  height: 88rpx;
+  line-height: 88rpx;
+  /* text-align: center; */
+}
+/*  */
+.dibu{
+ background: rgba(0,0,0,0.5);
+  
+  height: 780rpx;
+ 
+}
+/*遮罩  */
+.zhezao{
+ background: rgba(0,0,0,0.5);
+border: 0px;  
+}
+
+.addsite{
+  width: 90%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #e02576;
+  border-radius: 10rpx;
+  color: #fefefe;
+  font-size: 36rpx;
+  position: fixed;
+  bottom: 50rpx; 
+  left:35rpx; 
+}

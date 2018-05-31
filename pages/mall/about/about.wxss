@@ -1,0 +1,48 @@
+.light-name{
+  text-align: center;
+  width: 100%;
+  font-size: 36rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+.input{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  font-size:32rpx;
+}
+.input{
+
+  text-indent: 64rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  border-top: solid 1rpx #f2f2f2;
+  border-bottom: solid 1rpx #f2f2f2;
+}
+.call-man{
+  padding: 0 20rpx;
+  display: flex;
+  font-size: 28rpx;
+  color: #666;
+  height: 60rpx;
+  align-items: center;
+  border-bottom: solid 1rpx #f2f2f2;
+}
+.logo image{
+  height: 400rpx;
+  width: 100%
+}
+
+
+.provier-data{
+  position: fixed;
+  color:gray;
+  font-size: 24rpx;
+  bottom: 8rpx;
+  width: 100%;
+  text-align: center;
+}

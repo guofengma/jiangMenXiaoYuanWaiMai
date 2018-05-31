@@ -1,0 +1,13 @@
+<import src="/pages/mall/wxParse/wxParse.wxml"/> 
+
+<!-- 公告详情 -->
+<view class='bulletin-detail-box'>
+  <view class='bulletin-title'>{{infoTitle}}</view>
+  <view class='bulletin-time'>{{postDate}}</view>
+  <view class='cont'>
+  	<view class='bulletin-txt'>
+      <template is="wxParse" data="{{wxParseData:insertData.nodes}}" />
+    </view>
+  	<image class='bulletin-img' wx:for="{{imgList}}" src="{{item.imgPath}}"  mode="widthFix"></image>
+  </view>
+</view>

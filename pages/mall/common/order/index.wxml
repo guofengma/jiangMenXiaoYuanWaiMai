@@ -1,0 +1,56 @@
+<!--商品  -->
+<template name="myorder">
+  <view class="order_bg">
+    <view bindtap="toOrderTab" data-orderId="{{orderId}}">
+
+      <view class="orderNumber">
+        订单号：
+        <text>{{orderSn}}</text>
+      </view>
+
+      <view class="img_price" wx:for="{{goodsList}}">
+        <image src="{{item.goodsImg}}" class="order_img"></image>
+        <view class="about_pri">
+          <view class="goods_txt">{{item.goodsName}}</view>
+          <view class="pri">
+          
+            <view class="goods_pri">  ¥:{{item.goodsPrice}}</view>
+            <view class="goods_pri_txt">×{{item.goodsNum}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="order_state">
+        <view class="state">状态：
+          <text class="state_color">{{orderStateTxt}}</text>
+        </view>
+        <view>合计：
+          <text class="goods_pri">¥{{orderPrice}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <view wx:if="{{orderState==1}}" class="order_btn">
+      <view class="order_clear" bindtap="clearOrder" data-orderId="{{orderId}}">取消</view>
+      <view class="order_clear" bindtap="payOrder" data-orderId="{{orderId}}">立即支付</view>
+    </view>
+
+    <view wx:if="{{orderState==2}}" class="order_btn">
+      <view class="order_clear" bindtap="clearOrder" data-orderId="{{orderId}}">取消</view>
+    </view>
+
+    <view wx:if="{{orderState==3}}" class="order_btn">
+      <!-- <view class="order_clear" bindtap="logisticsOrder" data-orderId="{{orderId}}">查看物流</view> -->
+      <view class="order_clear" bindtap="clearOrder" data-orderId="{{orderId}}">取消</view>      
+      <view class="order_clear" bindtap="affirmOrder" data-orderId="{{orderId}}">确认收货</view>
+    </view>
+
+    <!-- <view wx:if="{{orderState==4}}" class="order_btn">
+      <view class="order_clear" bindtap="discussOrder" 
+      data-orderId="{{orderId}}"  data-goodsId="{{goodsList[0].goodsId}}" >评价</view>
+    </view> -->
+
+  </view>
+
+</template>

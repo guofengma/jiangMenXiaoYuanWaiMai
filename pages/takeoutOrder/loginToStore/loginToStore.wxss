@@ -1,0 +1,34 @@
+ page{
+	background: #f1f1f1;
+	font-size: 28rpx;
+}
+.sign-tit{
+	margin: 40rpx 0;
+	text-align: center;
+}
+.sign-box{
+	padding: 0 20rpx;
+}
+.sign-input{
+	width: 100%;
+	height: 90rpx;
+	background: #fff;
+	margin-bottom: 50rpx;
+	border-radius: 10rpx;
+	padding-left: 15rpx;
+	box-sizing: border-box;
+}
+
+.btn{
+	height: 98rpx;
+	line-height: 98rpx;
+	background: #e22319;
+	color: #fff;
+	font-size: 32rpx;
+	text-align: center;
+	border-radius: 10rpx;
+  	margin-bottom: 40rpx;
+}
+.link{
+	color: #e22319;
+} 

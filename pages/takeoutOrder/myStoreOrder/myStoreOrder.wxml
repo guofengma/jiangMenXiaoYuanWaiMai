@@ -1,0 +1,51 @@
+<view class="order-title">
+  <text>{{title}}</text>
+  <view class='entryDate'>
+    <view class="section" >
+      <picker class='inputfield' mode="date" value="{{date}}" start="2015-09-01" bindchange="bindBeginDateChange">
+        <view class="picker">{{beginDate}}</view>
+      </picker>
+    </view>
+    <view class='leftLine'></view>
+    <picker class='inputfield' mode="date" value="{{date}}" start="2015-09-01" bindchange="bindEndDateChange">
+      <view class="picker">{{endDate}}</view>
+    </picker>
+  </view>
+</view>
+
+<view class="order-item-title">
+  <view class='entryDate'>
+    <text>{{beginDate}}</text>
+    <view class='leftLine'></view>
+    <text>{{endDate}}</text>
+  </view>
+  <view class='order_count-total_sum'>
+    <view class='order-total'>
+      <text class='data-order'>{{orderNum}}</text>
+      <text class='order'>单</text>
+    </view>
+    <view class='order-sum'>
+      <text class='data-unit'>{{orderMoney}}</text>
+      <text class='unit'>元</text>
+    </view>
+  </view>
+</view>
+
+<view class='tenlog' wx:if="{{showten}}">最新销售记录</view>
+
+<view class='order-list-box'>
+  <view class='order-item' wx:for="{{orderList}}">
+    <view class='order-serial'>
+      <text class='order-user-name'>订单编号:{{item.orderSn}}</text>
+      <view class='time-date'>
+        <text class='time-pitch'>{{item.createTime}}</text>
+        <!-- <text>12:36</text> -->
+      </view>
+    </view>
+    <view>
+      <text class='order-price data-unit'>{{item.orderMoney}}</text>
+      <text>元</text>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,145 @@
+page{
+  background-color: #f8f8f8;
+}
+.order{
+  margin-bottom: 120rpx;
+}
+.orderItem{
+  margin-top: 20rpx;
+  /* height: 350rpx; */
+  width: 100%;
+  background-color: white;
+}
+.orderItem .itemDetail{
+ height: 100%;
+  margin-left: 20rpx;
+  width: 710rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderItem .itemDetail .shopItem{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.orderItem .itemDetail .shopItem .leftItem{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+ .orderItem .itemDetail .shopItem .shopImg .leftItem .leftImg{
+   height: 100%;
+   display: flex;
+   align-items: center;
+ }
+.orderItem .itemDetail .shopItem .leftItem .leftImg image{
+  margin-left: 20rpx;
+  margin-top: 14rpx;
+  width: 50rpx;
+  height: 50rpx; 
+}
+.orderItem .itemDetail .shopItem .shopName{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 100%;
+}
+
+.orderItem .itemDetail .shopItem .rightItem{
+  margin-right: 0rpx;
+  text-align: right;
+  font-size: 28rpx;
+  color: #505050;
+}
+.orderItem .itemDetail .foodItem{
+  /* margin-top: 20rpx; */
+  /* margin-bottom: 20rpx; */
+  background-color: #f8f8f8; 
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  border-bottom:1px solid #fff;
+}
+.orderItem .itemDetail .foodItem .leftImg{
+  height: 100%;
+   display: flex;
+   align-items: center;
+}
+.orderItem .itemDetail .foodItem .leftImg image{
+  width: 125rpx;
+  height: 125rpx;
+  margin-left: 20rpx;
+}
+.orderItem .itemDetail .foodItem .rightText{
+  flex: 1;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.orderItem .itemDetail .foodItem .rightText .foodName{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+  line-height: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width: 540rpx;
+}
+.orderItem .itemDetail .foodItem .rightText .foodNum{
+  font-size: 30rpx;
+  color: #1a1a1a;
+  margin-top: 20rpx;
+  line-height: 100%;
+}
+.orderItem .itemDetail .foodItem .rightText .foodTotal{
+  margin-top: 22rpx;
+  font-size: 24rpx;
+  color: #505050;
+  line-height: 100%;
+}
+.orderItem .itemDetail .foodItem .rightText .foodTotal .foodPrice{
+  font-size: 30rpx;
+  color:#1a1a1a;
+  line-height: 100%;
+}
+.orderItem .itemDetail .orderState{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.orderItem .itemDetail .orderState .payNow{
+  /* margin-top: 25rpx; */
+  margin-right: 0rpx;
+  width: 150rpx;
+  background-color: #e82576;
+  height: 58rpx;
+  line-height:  58rpx;
+  font-size: 30rpx;
+  color: white;
+  text-align: center;
+
+}
+.orderItem .itemDetail .orderState .cancelOrder,.comfirmReceived{
+  /* margin-top: 25rpx; */
+  width: 150rpx;
+  height: 58rpx;
+  color: #515151;
+  border: 1rpx  solid #a0a0a0;
+  line-height:  58rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.orderItem .itemDetail .orderState .cancelOrder{
+  margin-right: 20rpx;
+}
+
+.ctratetime{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  color: #666;
+}

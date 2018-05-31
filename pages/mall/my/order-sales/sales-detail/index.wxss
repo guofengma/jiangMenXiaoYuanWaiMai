@@ -1,0 +1,90 @@
+.goods_bg {
+  height: 220rpx;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.goods_img {
+  height: 180rpx;
+  width: 240rpx;
+}
+
+.goods_pri {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  justify-content: space-around;
+  height: 200rpx;
+}
+
+.pri_bg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #333;
+}
+
+.price {
+  color: red;
+  flex: 1;
+  font-size: 36rpx;
+}
+
+.goods_color {
+  color: gray;
+}
+
+.nums {
+  height: 80rpx;
+  border-bottom: solid 2rpx #f2f3f2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 36rpx;
+  color: #666;
+}
+
+.express {
+  height: 80rpx;
+  border-bottom: solid 2rpx #f2f3f2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  font-size: 36rpx;
+  color: #666;
+}
+
+.sales{
+  padding:0 30rpx;
+}
+.state_txt{
+  color: #28b1ab;
+}
+.expree_num{
+  height: 80rpx;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goods_btn {
+  height: 90rpx;
+  background-color: #28c5be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 42rpx;
+}
+

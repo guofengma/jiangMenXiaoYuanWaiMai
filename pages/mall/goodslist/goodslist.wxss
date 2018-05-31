@@ -1,0 +1,57 @@
+/* pages/goodslist/goodslist.wxss */
+@import "../common/goods/goods.wxss";
+
+page {
+  background-color: #f3f3f3;
+  font-family: "微软雅黑";
+}
+
+.list_nav {
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: relative;
+}
+
+.composite {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  flex-direction: row;
+}
+
+.activite {
+  color: red;
+}
+
+.no {
+  color: #333;
+}
+
+.left {
+  border-left: solid 3rpx gainsboro;
+}
+
+.list {
+  height: 3rpx;
+  background-color: gainsboro;
+  width: 100%;
+}
+
+.up_img {
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  height: 16rpx;
+  width: 18rpx;
+}
+
+.no_data {
+  font-size: 28rpx;
+  color: #ccc;
+  text-align: center;
+  margin-top: 20rpx;
+}

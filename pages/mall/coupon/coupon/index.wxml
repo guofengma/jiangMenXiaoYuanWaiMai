@@ -1,0 +1,7 @@
+
+<block wx:for="{{couponImg}}" wx:for-item="item"> 
+<view class="coupon_bg">
+<image bindtap="getCouponTab"  data-coupon="{{item.seqId}}"  
+src="{{item.ticketImg}}" class="coupon_img"></image>
+</view>
+</block>

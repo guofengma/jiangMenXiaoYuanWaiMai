@@ -1,0 +1,139 @@
+/**app.wxss**/
+ @import "/pages/template/tabbar/tabbar.wxss".container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.nav_hei{
+  height:3rpx;
+  background-color:#ccc;
+}
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+ font-size: 32rpx;
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+ color: #666666;
+} 
+.navbar .item.active{ 
+ color:#000000; 
+} 
+
+/*新增公共样式  */
+.tc{
+  text-align: center;
+}
+
+.none{
+  display: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:before,.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.noData{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #fff;
+  font-size: 28rpx;
+}
+/*我的优惠卷属性  */
+.discountsBack {
+  margin:15rpx 0; 
+  width: 100%;
+  overflow: hidden;
+}
+.discountsBack .discountsFrame{
+  width: 100%;
+  background: #fff;
+  border-radius: 10rpx;
+  border: solid 1rpx #e3e3e3;
+  display: flex;
+  height: 200rpx;
+  align-items: center;
+  box-sizing: border-box;
+}
+.discountsFrame .synopsis{
+  flex: 0 0 70%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.discountsFrame .synopsis .img{
+  flex: 0 0 95rpx;
+  width: 95rpx;
+  height: 60rpx;
+  margin: 0 26rpx 0 28rpx;
+}
+.discountsFrame .synopsis .synopsisText{
+  flex: 1;
+  box-sizing: border-box;
+  border-right: dashed  4rpx #e3e3e3; 
+}
+.discountsFrame .synopsis .synopsisText .name{
+  font-size: 32rpx;
+  padding-bottom: 10rpx;
+}
+.discountsFrame .synopsis .synopsisText .text{
+  font-size: 30rpx;
+}
+.discountsFrame .use{
+  flex: 1;
+  display: flex;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+.circle{
+  width: 20rpx;
+  height: 20rpx;
+  background: #fff;
+  border-radius: 50%;
+  border: solid 4rpx #e3e3e3;
+  position: absolute;
+}
+.topLeft{
+  top: -10rpx;
+  left: -10rpx;
+}
+.bottomLeft{
+  bottom: -10rpx;
+  left: -10rpx;
+}
+.discountsFrame .use .useBommon{
+  display: flex;
+  align-items: center;
+}
+.discountsFrame .use .useBommon .bommon{
+  width: 150rpx;
+  height: 50rpx;
+  background: red;
+  text-align: center;
+  border-radius: 50px;
+  line-height: 50rpx;
+  color: #fff;
+  font-size: 26rpx;
+}

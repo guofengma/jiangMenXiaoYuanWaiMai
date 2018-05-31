@@ -1,0 +1,260 @@
+page {
+  background-color: #f0f0f0;
+}
+
+.content {
+  height: 115rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-right {
+  display: flex;
+  font-size: 24rpx;
+}
+
+/*第2行  */
+
+.content1 {
+  height: 88rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content1-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.content1-right {
+  display: flex;
+  font-size: 24rpx;
+}
+
+/*列表3  */
+
+.content2 {
+  height: 88rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content2-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.content2-right {
+  display: flex;
+  font-size: 28rpx;
+}
+/*中间部分  */
+.message {
+  padding: 0 30rpx;
+  height: 160rpx;
+  margin-top: 31rpx;
+  background-color: white;
+   padding-top: 30rpx; 
+ position: relative;
+}
+
+.message-name {
+  font-size: 28rpx;
+  color: #1a1a1a;
+   
+ display: flex; 
+}
+ .message-name-right{
+position: absolute;
+right: 60rpx;
+color: #e82576;
+}
+ .message-name .mt2 {
+  margin-left: 20rpx;
+
+  } 
+  
+.message-num {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+ 
+
+  .message-num text:last-child {
+  margin-left: 20rpx;
+}  
+
+.message-city {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 12rpx;
+  
+}
+
+.message-city text:last-child {
+  margin-left: 20rpx;
+}
+
+/*  */
+.message2 {
+  padding: 0 60rpx;
+  height: 160rpx;
+  background-color: white;
+  margin-top: 31rpx;
+}
+
+.message2-name {
+  font-size: 28rpx;
+  color: #1a1a1a;
+}
+
+.message2-name  text:last-child{
+  margin-left: 20rpx;
+  
+}
+.message2-num {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.message2-num text:last-child {
+  margin-left: 20rpx;
+}
+
+.message2-city {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 12rpx;
+  
+}
+
+.message2-city text:last-child {
+  margin-left: 20rpx;
+}
+/*订单详情  */
+.order{
+  margin-top: 10rpx;
+  padding-top: 38rpx;
+  background-color: white;
+
+}
+.order .order-header{
+  display: inline-block;
+  font-size: 28rpx;
+  padding: 0 60rpx;
+  padding-bottom: 26rpx;
+
+}
+.order-list{
+  width: 690rpx;
+  height: 160rpx;
+   margin: 0 auto; 
+  padding-left: 30rpx;
+  
+   display: flex; 
+   align-items: center; 
+  /* margin-top: 26rpx; */
+  background-color: #f8f8f8;
+  margin-top: 10rpx;
+}
+.order-content{
+  display: flex;
+  
+}
+.order-content image{
+  height: 125rpx;
+  width: 125rpx;
+}
+
+.order-content .order-con-right{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 505rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  
+}
+
+.order-right-num{
+  font-size: 30rpx;
+  
+}
+.order-right-num text{
+margin-left: 20rpx;
+display: inline-block;
+padding-top: 10rpx;
+
+}
+/*餐盒费  */
+.cost1{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  background-color: white;
+  height: 88rpx;
+  align-items: center;
+}
+/*配送费  */
+.cost2{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  height: 88rpx;
+  align-items: center;
+  background-color: white;
+  
+}
+/*合计  */
+.cost3{
+  display: flex;
+  justify-content: space-between;
+  width: 630rpx;
+  padding: 0 30rpx;
+   margin: 0 auto;
+  font-size: 30rpx;
+  height: 88rpx;
+  align-items: center;
+  background-color: white;
+  border-top: 1rpx solid #f0f0f0;
+}
+/*按钮  */
+.but-box{
+  height: 98rpx;
+  margin-top: 45rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.but-box .but{
+  width: 695rpx;
+  margin: 0 auto;
+  background-color: #09bb07;
+  height: 80rpx;
+  color: white;
+}

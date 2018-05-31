@@ -1,0 +1,15 @@
+<import src="/pages/template/tabbar/tabbar.wxml" />
+<!-- 轮播图 -->
+<swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true" indicator-color="#fff" indicator-active-color="#da251c">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" data-url="{{item.slideLink}}" bindtap='toSwiperUrl' class="slide-image" mode='aspectFill' ></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!--类别大图  -->
+<view class='img-box'>
+  <image class='item-img' bindtap='toList' wx:for="{{list}}" wx:key="key" data-cateid="{{item.seqId}}" mode="widthFix" src="{{item.typeImg}}"></image>
+</view>
+
+<template is="tabbar" data="{{tabbar}}"></template>

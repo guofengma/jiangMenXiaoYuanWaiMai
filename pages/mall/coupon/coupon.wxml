@@ -1,0 +1,21 @@
+
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text> 
+</view> 
+<view class="nav_hei"></view>
+
+<view class="cupon" wx:if="{{currentTab==0}}">
+<block wx:for="{{couponImg}}" wx:for-item="item">
+<image src="{{item.ticketImg}}" class="coupon_img"></image>
+</block>
+</view>
+
+<view class="cupon" wx:if="{{currentTab==1}}">
+<block wx:for="{{couponImg}}" wx:for-item="item">
+<view wx:if="{{item.isUsed==1}}" class="coupon-item">
+<image src="{{item.ticketImg}}" class="coupon_img"></image>
+</view>
+</block>
+</view>
+
+
