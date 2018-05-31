@@ -46,7 +46,7 @@
 
   <!--商家列表  -->
   <view class="navbar"> 
-    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+    <text wx:for="{{navbar}}" wx:key="n" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
   </view>
   <view class='shopItems'>
     <block wx:for="{{newStoreList}}" wx:for-item="item" wx:key="item">
@@ -60,7 +60,7 @@
           </view>
           <view class='saleView'>
             <view class='starView'>
-              <image wx:for="{{stars}}" wx:for-item="itm" class='comment-star' src="{{index < (item.storeScore || 5) ?goodStar:defaultStar }}"></image>
+              <image wx:for="{{stars}}" wx:key="s" wx:for-item="itm" class='comment-star' src="{{index < (item.storeScore || 5) ?goodStar:defaultStar }}"></image>
             </view>
             <view class='saleNum'>月销: {{item.saleNum}}
             </view>

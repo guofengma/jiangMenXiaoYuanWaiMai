@@ -3,7 +3,7 @@
     <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
   </view>
   <view class='shopItems'>
-    <block wx:for="{{storeList}}" wx:for-item="item" wx:key="item">
+    <block wx:for="{{storeList}}" wx:key="s" wx:for-item="item" wx:key="item">
       <view class='itemDetail' bindtap='toStoreDetail' data-seqid="{{item.seqId}}">
         <view class='leftImg'>
           <image src="{{item.storeImg}}" class="shopImg" mode='aspectFit'></image>

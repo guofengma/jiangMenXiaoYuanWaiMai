@@ -28,9 +28,8 @@ Page({
     ],
     commentScore:4.7,
     bean:{
-      storeAddr:"广州市天河区中山大道中443号3-4楼",
-      storeOpenTime:" 周一至周日 8：00 - 22：00",
-      storeDesc:"肯德基（KentuckyFried Chicken，肯塔基州炸鸡），简称KFC，是美国跨国连锁餐厅之一，也是世界第二大速食及最大炸鸡连锁企业，1952年由创始人山德士先生（Colonel Harland Sanders）创建，[1]  主要出售炸鸡、汉堡、薯条、盖饭、蛋挞、汽水等高热量快餐食品。肯德基隶属于百胜中国控股有限公司（简称“百胜中国”）[2]  ， 股票代码为YUMC[2]  ，是Yum！Brands在中国大陆的特许经营商[2]  ，拥有肯德基品牌在中国大陆的独家经营权。 [2] 肯德基与百事可乐结成了战略联盟，固定销售百事公司提供的碳酸饮料。2017年6月，《2017年BrandZ最具价值全球品牌100强》公布，肯德基排名第81位。[3] ",
+      storeAddr:"",
+      storeDesc:"",
       storeImgs: [
         // { imgPath: "/images/takeout/store-img.jpg" }
       ],
@@ -69,7 +68,54 @@ Page({
       foodPrice:"",
     },
     showFoodDetail:false
+  },
 
+  //转换当前时间 开始营业时间 结束营业时间 为 分为 单位  
+  dateFormate(){
+    let that = this;
+    let storeStartTime = that.data.bean.storeStartTime
+    let storeEndTime = that.data.bean.storeEndTime
+    let stratMin = 0;
+    let endMin = 0;
+    let nowMin = 0;
+    if (storeStartTime){
+      stratMin += storeStartTime.split(':').map((e,i)=>{
+        console.log(e)
+        if(i == 0){
+          console.log("e * 60",parseInt(e * 60))
+          return parseInt(e*60)
+        }else{
+          console.log('e',parseInt(e))
+          return parseInt(e)
+        }
+      })
+    }
+    console.log("stratMin", parseInt(stratMin))
+
+    if (storeEndTime) {
+      endMin += storeEndTime.split(':').map((e, i) => {
+        console.log(e)
+        if (i == 0) {
+          console.log("e * 60", parseInt(e * 60))
+          return parseInt(e * 60)
+        } else {
+          console.log('e', parseInt(e))
+          return parseInt(e)
+        }
+      })
+    }
+    console.log("endMin", parseInt(endMin))
+
+    nowMin = new Date().getHours() * 60 + new Date().getMinutes()
+
+    console.log("nowMin", parseInt(nowMin))
+    
+
+    that.setData({
+      stratMin: parseInt(stratMin),
+      endMin: parseInt(endMin),
+      nowMin: parseInt(nowMin)
+    })
 
   },
 
@@ -237,8 +283,12 @@ Page({
             commentScore: commentScore,
             bean: bean
           })
+          that.dateFormate()
         } else {
-
+          wx.showToast({
+            icon:'none',
+            title: '获取失败',
+          })
         }
       },
       fail: function (res) {

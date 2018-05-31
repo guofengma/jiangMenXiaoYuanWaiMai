@@ -58,7 +58,8 @@
     "pages/coupon/coupon",
     "pages/couponTew/couponTew",
     "pages/takeoutOrder/myOrderDetail/myOrderDetail",
-    "pages/takeoutOrder/myStoreGoodsMinXi/myStoreGoodsMinXi"
+    "pages/takeoutOrder/myStoreGoodsMinXi/myStoreGoodsMinXi",
+    "pages/takeoutOrder/saveOrderAgin/saveOrderAgin"
   ],
   "window": {
     "backgroundTextStyle": "light",

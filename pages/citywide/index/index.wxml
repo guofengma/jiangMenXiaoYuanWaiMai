@@ -1,7 +1,7 @@
 <import src="/pages/template/tabbar/tabbar.wxml" />
 <!-- 轮播图 -->
 <swiper class='swiper' indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true" indicator-color="#fff" indicator-active-color="#da251c">
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key="i">
     <swiper-item>
       <image src="{{item.imgUrl}}" data-url="{{item.slideLink}}" bindtap='toSwiperUrl' class="slide-image" mode='aspectFill' ></image>
     </swiper-item>

@@ -18,7 +18,7 @@
   </view>
 
   <view class="navbar">
-    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+    <text wx:for="{{navbar}}" wx:key="n" data-idx="{{index}}" class="item {{currentTab==index? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
   </view>
 
 <swiper current="{{currentTab}}" bindchange="setCurrentTab">
@@ -92,7 +92,7 @@
         </view>
       </view>
       <view class='scoreStar'>
-        <image wx:for="{{stars}}" wx:for-item="itm" class='store-star' src="{{index<commentScore?goodStar:defaultStar}}"></image>
+        <image wx:for="{{stars}}" wx:key="s" wx:for-item="itm" class='store-star' src="{{index<commentScore?goodStar:defaultStar}}"></image>
       </view>
     </view>
 
@@ -105,7 +105,7 @@
 
     <view class='comment'>
 
-        <view class='commentItem' wx:for="{{commentList}}" >
+        <view class='commentItem' wx:for="{{commentList}}" wx:key="c" >
           <view class='userInfo'>
             <view class='userImg'>
               <image src='{{item.mbImg}}' mode='aspectFit'></image>
@@ -119,7 +119,7 @@
               </view>
 
               <view class='scoreStar'>
-                <image wx:for="{{stars}}" wx:for-item="itm" class='comment-star' src="{{index<item.commentScore?goodStar:defaultStar}}"></image>
+                <image wx:for="{{stars}}" wx:key="s" wx:for-item="itm" class='comment-star' src="{{index<item.commentScore?goodStar:defaultStar}}"></image>
               </view>
             </view>
 
@@ -143,7 +143,7 @@
       <image class='call-icon' bindtap='callStore' data-phone="{{bean.storePhone1}}" mode='widthFix' src="/images/takeout/call.png"></image>
     </view>
     <view class='store-imgs'>
-      <image class='store-img' wx:if="{{index < 4}}" bindtap="previewImage" data-src="{{item.imgPath}}" wx:for="{{bean.storeImgs}}" src="{{item.imgPath}}"></image>
+      <image class='store-img' wx:if="{{index < 4}}" bindtap="previewImage" data-src="{{item.imgPath}}" wx:key="b" wx:for="{{bean.storeImgs}}" src="{{item.imgPath}}"></image>
       <!-- <image class='store-img' src="/images/takeout/store-img.jpg"></image> -->
     </view>
     <view class='open-time-box'>

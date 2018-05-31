@@ -15,12 +15,13 @@ page {
   display: flex;
   padding: 0 30rpx;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100rpx;
 }
 
 .order-state{
   font-size: 24rpx;
+  margin-left: auto;
 }
 
 .order-list{
@@ -118,4 +119,10 @@ padding-top: 10rpx;
 
 .order_address_bg{
   margin-bottom: 20rpx;
+}
+
+.ctratetime{
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  color: #666;
 }

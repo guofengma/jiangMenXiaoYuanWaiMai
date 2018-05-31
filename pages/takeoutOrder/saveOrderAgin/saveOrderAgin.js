@@ -18,13 +18,14 @@ Page({
       ],
     addrId:0,
     storeId:0,
-    
+    aginAddrSeqId:"",
   },
 
   //获取地址列表
   getAddrList: function () {
     var that = this;
-    var openId = wx.getStorageSync("openId")
+    var openId = wx.getStorageSync("openId");
+    var aginAddrSeqId = that.data.aginAddrSeqId
     wx.request({
       url: cyurl.listAdress,
       data: {
@@ -48,7 +49,7 @@ Page({
         wx.setStorageSync('schoolId', addrList[0].schoolId)
         wx.setStorageSync('addrSeqId', addrList[0].seqId)
         for(var i in addrList){
-          if (addrList[i].isDeft == 1){
+          if (addrList[i].seqId == aginAddrSeqId){
             wx.setStorageSync('schoolName', addrList[i].schoolName)
             wx.setStorageSync('buildingName', addrList[i].buildingName)
             wx.setStorageSync('addrDetail', addrList[i].addrDetail)
@@ -338,7 +339,6 @@ Page({
       fail: function (res) {
         console.log("支付失败 -->",res)
         wx.showToast({
-          icon:"none",
           title: '支付失败'
         })
         setTimeout(function () {
@@ -357,8 +357,8 @@ Page({
     console.log(options);
     // var orderInfo = JSON.parse(options.orderInfo);
     // var cartData = JSON.parse(options.cartData);
-    var cartData = wx.getStorageSync("cartData");
-    var orderInfo = wx.getStorageSync("wmOrderInfo");
+    var cartData = wx.getStorageSync("aginCartData");
+    var orderInfo = wx.getStorageSync("aginOrderInfo");
       
       console.log("orderInfo-->",orderInfo);
       console.log("cartData-->",cartData);
@@ -381,12 +381,11 @@ Page({
     //取到缓存的数据
     //let schoolName = wx.getStorageSync("schoolName");
     //console.log("storage:",schoolName);
-    let addrSeqId = wx.getStorageSync("addrSeqId")
-    if (!addrSeqId) {
-      this.getAddrList();
-    } else {
-      this.getAddressData();
-    }
+    let aginAddrSeqId = wx.getStorageSync("aginAddrSeqId")
+    this.setData({
+      aginAddrSeqId: aginAddrSeqId
+    })
+    this.getAddrList();
     
   },
 

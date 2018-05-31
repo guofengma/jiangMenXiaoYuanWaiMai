@@ -3,7 +3,7 @@ var zsLedUrl = "http://wechatmp.bingosale.net:4902/cymall/m";//测试路径
 //var zsLedUrl = "http://wechatmp.bingosale.net:4908/cymall/m";//测试路径
 
 
-// var zsLedUrl = "https://mp.goumisong.com/cymall/m";//测试路径
+var zsLedUrl = "https://mp.goumisong.com/cymall/m";//正式库
 
 
 

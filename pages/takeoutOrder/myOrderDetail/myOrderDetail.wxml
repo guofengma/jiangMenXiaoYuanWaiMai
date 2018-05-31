@@ -10,10 +10,11 @@
 <view class='order'>
 
   <view class='order-header'>
-    <view class='label'>订单详情</view>
+    <view class='label'>{{orderDetail.storeName}}</view>
+    <view class='ctratetime'>{{orderDetail.createTime}}</view>
     <view class='order-state'>{{orderDetail.orderStateTxt}}</view>
   </view>
-  <view wx:for="{{goodsList}}">
+  <view wx:for="{{goodsList}}" wx:key="g">
     <view class='order-list'>
       <view class='order-content'>
         <image src='{{item.goodsImg}}'></image>

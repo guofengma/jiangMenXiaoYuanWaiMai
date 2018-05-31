@@ -41,6 +41,57 @@ Page({
     }
   },
 
+  //再来一单
+  agin(){
+    let that = this;
+    let orderDetail = that.data.orderDetail
+    let goodsList = that.data.goodsList
+    let cartData = [];
+    let orderInfo={};
+    for(var i in goodsList){
+      cartData.push({
+        num:goodsList[i].goodsNum,
+        productDetail:{
+          foodImg:goodsList[i].goodsImg,
+          seqId:goodsList[i].goodsId,
+          foodName:goodsList[i].goodsName,
+          foodPrice:goodsList[i].goodsPrice,
+        }
+      })
+    }
+    // let cartData = [
+    //   {
+    //     num:"",
+    //     productDetail:{
+    //       foodImg:"",
+    //       foodName:"",
+    //       seqId:"",
+    //       foodPrice:"",
+    //     }
+    //   }
+    // ];
+    orderInfo = {
+      storeName:orderDetail.storeName,
+      totPrice:orderDetail.orderPrice,  //总价  含运费
+      totNmu:orderDetail.goodsNum,
+      deliveryFee:orderDetail.deliveryFee,
+      storeId:orderDetail.storeId,
+    }
+    console.log("cartData -->",cartData)
+    console.log("orderInfo -->",orderInfo)
+
+    let aginAddrSeqId = that.data.addrBean.seqId
+
+    wx.setStorageSync('aginCartData',cartData)
+    wx.setStorageSync('aginOrderInfo',orderInfo)
+    wx.setStorageSync('aginAddrSeqId',aginAddrSeqId);
+
+    wx.navigateTo({
+      url: '/pages/takeoutOrder/saveOrderAgin/saveOrderAgin',
+    })
+
+  },
+
   //订单详情
   getOrderDetail: function (e) {
     let that = this;
@@ -148,11 +199,6 @@ Page({
         })
       }
     })
-  },
-
-  //再来一单
-  agin(){
-    
   },
 
 

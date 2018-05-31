@@ -6,7 +6,7 @@
 <!--公告列表  -->
 <view class='bulletins-box list-box' style='display:none;'>
 
-  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" data-noticeid="{{item.seqId}}">
+  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" wx:key="i" data-noticeid="{{item.seqId}}">
     <image class='item-view-img' mode="widthFix" src="{{item.infoImg}}"></image>
     <view class='item-info'>
       <text class='item-title'>{{item.infoTitle}}</text>
@@ -29,7 +29,7 @@
 </view>
 
 <scroll-view scroll-y class="bulletins-box list-box"  bindscrolltolower="lower" bindscroll="scroll">
-  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" data-noticeid="{{item.seqId}}">
+  <view class='list-item' bindtap='toDetail' wx:for="{{noticeList}}" wx:key="i" data-noticeid="{{item.seqId}}">
     <image class='item-view-img' mode="widthFix" src="{{item.infoImg}}"></image>
     <view class='item-info'>
       <text class='item-title'>{{item.infoTitle}}</text>
